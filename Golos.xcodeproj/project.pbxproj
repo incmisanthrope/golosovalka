@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F739D89F1ED317C200C2BB10 /* Coder.m in Sources */ = {isa = PBXBuildFile; fileRef = F739D89E1ED317C200C2BB10 /* Coder.m */; };
 		F739D8A31ED41C6900C2BB10 /* tabFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F739D8A21ED41C6900C2BB10 /* tabFourViewController.m */; };
 		F739D8A81ED42C8300C2BB10 /* Values.m in Sources */ = {isa = PBXBuildFile; fileRef = F739D8A71ED42C8300C2BB10 /* Values.m */; };
 		F739D8B01ED4521500C2BB10 /* TabkaTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F739D8AF1ED4521500C2BB10 /* TabkaTwoViewController.m */; };
@@ -23,12 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F739D89D1ED317C200C2BB10 /* Coder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coder.h; sourceTree = "<group>"; };
-		F739D89E1ED317C200C2BB10 /* Coder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coder.m; sourceTree = "<group>"; };
 		F739D8A11ED41C6900C2BB10 /* tabFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabFourViewController.h; sourceTree = "<group>"; };
 		F739D8A21ED41C6900C2BB10 /* tabFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tabFourViewController.m; sourceTree = "<group>"; };
-		F739D8A61ED42C8300C2BB10 /* Values.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Values.h; sourceTree = "<group>"; };
-		F739D8A71ED42C8300C2BB10 /* Values.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Values.m; sourceTree = "<group>"; };
+		F739D8A61ED42C8300C2BB10 /* Values.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Values.h; path = ../Values.h; sourceTree = "<group>"; };
+		F739D8A71ED42C8300C2BB10 /* Values.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Values.m; path = ../Values.m; sourceTree = "<group>"; };
 		F739D8AE1ED4521500C2BB10 /* TabkaTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabkaTwoViewController.h; sourceTree = "<group>"; };
 		F739D8AF1ED4521500C2BB10 /* TabkaTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabkaTwoViewController.m; sourceTree = "<group>"; };
 		F739D8B11ED463B800C2BB10 /* Golos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Golos-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -60,15 +57,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F739D89C1ED317A600C2BB10 /* saveReadPlist */ = {
-			isa = PBXGroup;
-			children = (
-				F739D89D1ED317C200C2BB10 /* Coder.h */,
-				F739D89E1ED317C200C2BB10 /* Coder.m */,
-			);
-			name = saveReadPlist;
-			sourceTree = "<group>";
-		};
 		F739D8A01ED41C3900C2BB10 /* tabFour */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,16 +64,11 @@
 				F739D8A21ED41C6900C2BB10 /* tabFourViewController.m */,
 			);
 			name = tabFour;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		F7716D721ECC7B2F009DB974 = {
 			isa = PBXGroup;
 			children = (
-				F739D8A61ED42C8300C2BB10 /* Values.h */,
-				F739D8A71ED42C8300C2BB10 /* Values.m */,
-				F739D89C1ED317A600C2BB10 /* saveReadPlist */,
-				F7C79ABF1ECE2EF100F628B6 /* plist */,
 				F7716D7D1ECC7B2F009DB974 /* Golos */,
 				F7716D7C1ECC7B2F009DB974 /* Products */,
 				F739D8D51ED4694400C2BB10 /* Cor.xcdatamodeld */,
@@ -104,14 +87,13 @@
 		F7716D7D1ECC7B2F009DB974 /* Golos */ = {
 			isa = PBXGroup;
 			children = (
+				F79E6CD81ED810CD004ADA86 /* TabBarClassGroup */,
 				F7716D811ECC7B2F009DB974 /* AppDelegate.h */,
 				F7716D821ECC7B2F009DB974 /* AppDelegate.m */,
-				F7C79A961ECC8E8E00F628B6 /* TabOne */,
-				F739D8A01ED41C3900C2BB10 /* tabFour */,
 				F7716D841ECC7B2F009DB974 /* ViewController.h */,
-				F7C79ABA1ECDB76400F628B6 /* TabTwo */,
 				F7716D851ECC7B2F009DB974 /* ViewController.m */,
-				F7C79ABB1ECDB76F00F628B6 /* TabTr */,
+				F739D8A61ED42C8300C2BB10 /* Values.h */,
+				F739D8A71ED42C8300C2BB10 /* Values.m */,
 				F7716D8A1ECC7B2F009DB974 /* Assets.xcassets */,
 				F7716D871ECC7B2F009DB974 /* Main.storyboard */,
 				F7716D8C1ECC7B30009DB974 /* LaunchScreen.storyboard */,
@@ -129,6 +111,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F79E6CD81ED810CD004ADA86 /* TabBarClassGroup */ = {
+			isa = PBXGroup;
+			children = (
+				F739D8A01ED41C3900C2BB10 /* tabFour */,
+				F7C79ABA1ECDB76400F628B6 /* TabTwo */,
+				F7C79A961ECC8E8E00F628B6 /* TabOne */,
+			);
+			name = TabBarClassGroup;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		F7C79A961ECC8E8E00F628B6 /* TabOne */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +131,7 @@
 				F7C79ABD1ECDB97800F628B6 /* TableTwo.m */,
 			);
 			name = TabOne;
+			path = Golos;
 			sourceTree = "<group>";
 		};
 		F7C79ABA1ECDB76400F628B6 /* TabTwo */ = {
@@ -147,20 +141,7 @@
 				F739D8AF1ED4521500C2BB10 /* TabkaTwoViewController.m */,
 			);
 			name = TabTwo;
-			sourceTree = "<group>";
-		};
-		F7C79ABB1ECDB76F00F628B6 /* TabTr */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = TabTr;
-			sourceTree = "<group>";
-		};
-		F7C79ABF1ECE2EF100F628B6 /* plist */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = plist;
+			path = Golos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +222,6 @@
 				F7716D831ECC7B2F009DB974 /* AppDelegate.m in Sources */,
 				F7716D801ECC7B2F009DB974 /* main.m in Sources */,
 				F739D8A81ED42C8300C2BB10 /* Values.m in Sources */,
-				F739D89F1ED317C200C2BB10 /* Coder.m in Sources */,
 				F739D8A31ED41C6900C2BB10 /* tabFourViewController.m in Sources */,
 				F739D8B01ED4521500C2BB10 /* TabkaTwoViewController.m in Sources */,
 				F7C79ABE1ECDB97800F628B6 /* TableTwo.m in Sources */,
