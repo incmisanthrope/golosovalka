@@ -14,7 +14,7 @@
 @interface TableTwo ()
 @property (strong, nonatomic) NSArray *arrayCategorOne, *arrayCategorTwo, *arrayCategorThree, *arrayCategorFour, *arrayCategorFive;
 @property (strong, nonatomic) NSString *strTableViewCell;
-@property NSInteger *var;
+@property NSInteger *userChoiseItemVariable;
 @end
 
 @implementation TableTwo
@@ -42,8 +42,8 @@ NSInteger *var;
 
     TableOne *tabOne = [TableOne new];
 
-    var = [tabOne returnUserChoise];
-    NSLog(@"%ld",(long) var);
+    _userChoiseItemVariable = [tabOne returnUserChoise];
+    NSLog(@"%ld",(long) _userChoiseItemVariable);
 
     
 }

@@ -26,27 +26,10 @@
     [super viewWillAppear:YES];
 }
 
-
-- (void) handleEndEditing {
-    [self.textCategory resignFirstResponder];
-    [self.textQu resignFirstResponder];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 
-
-- (IBAction)saveBTN:(id)sender {
-    Values *valu = [Values new];
-    [valu saveQ:_textQu saveC:_textCategory];
-}
-
-- (IBAction)saveOnlyCategory:(id)sender {
-}
-
-- (IBAction)saveOnlyVopros:(id)sender {
-}
 @end

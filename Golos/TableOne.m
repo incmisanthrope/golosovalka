@@ -13,7 +13,7 @@
 
 @property (strong , nonatomic) NSArray *arraTbleView;
 @property (strong, nonatomic) NSArray *array;
-@property (assign, nonatomic) NSInteger *vartabone;
+@property (assign, nonatomic) NSInteger *userChoiseValue;
 
 @end
 
@@ -62,18 +62,18 @@
         switch (indexPath.row) {
         case 0:
             NSLog(@"case 0 selected");
-                _vartabone = indexPath.row;
-                NSLog(@"value swotch return, %ld",(long) _vartabone);
+                _userChoiseValue = indexPath.row;
+                NSLog(@"value swotch return, %ld",(long) _userChoiseValue);
             break;
             case 1:
             NSLog(@"case 1 selected");
-                _vartabone = indexPath.row;
-                NSLog(@"value swotch return, %ld",(long) _vartabone);
+                _userChoiseValue = indexPath.row;
+                NSLog(@"value swotch return, %ld",(long) _userChoiseValue);
             break;
             case 2:
             NSLog(@"case 2 selected");
-                _vartabone = indexPath.row;
-                NSLog(@"value swotch return, %ld",(long) _vartabone);
+                _userChoiseValue = indexPath.row;
+                NSLog(@"value swotch return, %ld",(long) _userChoiseValue);
                 break;
         default:
             break;
@@ -82,7 +82,7 @@
 }
 
 -(NSInteger) returnUserChoise{
-    return *(_vartabone);
+    return *(_userChoiseValue);
 }
 
 

@@ -10,12 +10,12 @@
 
 @implementation Values
 
--(void) saveQ:(NSString*)questi saveC:(NSString*) categ{
+-(void) saveQuestion:(NSString*)questionValue saveCategory:(NSString*)categoryValue {
     
     NSString *filePath= [[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"];
     
     NSMutableDictionary *nameDictionary = [NSMutableDictionary dictionary];
-    [nameDictionary setValue:questi forKey:categ];
+    [nameDictionary setValue:questionValue forKey:categoryValue];
     
     NSMutableArray *plist = [NSMutableArray arrayWithContentsOfFile:filePath];
     if (plist == nil) plist = [NSMutableArray array];
