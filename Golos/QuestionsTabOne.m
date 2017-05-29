@@ -6,19 +6,19 @@
 //  Copyright © 2017 IncMisanthrope. All rights reserved.
 //
 
-#import "TableOne.h"
-#import "TableTwo.h"
+#import "QuestionsTabOne.h"
+#import "QuestionsTabTwo.h"
 
-@interface TableOne ()
+@interface QuestionsTabOne ()
 
 @property (strong , nonatomic) NSArray *arraTbleView;
 @property (strong, nonatomic) NSArray *array;
-@property (assign, nonatomic) NSInteger *userChoiseValue;
 
 @end
 
-@implementation TableOne
+@implementation QuestionsTabOne
 
+NSInteger *userChoiseCategory;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,8 +27,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    self.arraTbleView = @[@"categor 1", @"categor 2", @"categor 3",@"categor 4",@"categor 5"];
-
+    self.arraTbleView = @[@"categor 1", @"categor 2", @"categor 3",@"categor 4",@"categor 5"];    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,7 +45,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
         
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell1" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellCategory" forIndexPath:indexPath];
 
     NSString *stingCell = [_arraTbleView objectAtIndex:indexPath.row];
     cell.textLabel.text = stingCell;
@@ -57,32 +56,30 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSLog(@"%ld", (long)indexPath.row);
+    QuestionsTabTwo *quTabTwo = [QuestionsTabTwo new];
     
         switch (indexPath.row) {
-        case 0:
-            NSLog(@"case 0 selected");
-                _userChoiseValue = indexPath.row;
-                NSLog(@"value swotch return, %ld",(long) _userChoiseValue);
-            break;
-            case 1:
-            NSLog(@"case 1 selected");
-                _userChoiseValue = indexPath.row;
-                NSLog(@"value swotch return, %ld",(long) _userChoiseValue);
-            break;
-            case 2:
-            NSLog(@"case 2 selected");
-                _userChoiseValue = indexPath.row;
-                NSLog(@"value swotch return, %ld",(long) _userChoiseValue);
+            case 0:
+                userChoiseCategory = indexPath.row;
                 break;
-        default:
-            break;
+            case 1:
+                userChoiseCategory = indexPath.row;
+                break;
+            case 2:
+                userChoiseCategory = indexPath.row;
+                break;
+            case 3:
+                userChoiseCategory = indexPath.row;
+                break;
+            case 4:
+                userChoiseCategory = indexPath.row;
+                break;
     }
-  
+    
 }
 
--(NSInteger) returnUserChoise{
-    return *(_userChoiseValue);
+-(NSUInteger) returnChoiseCategory{
+    return userChoiseCategory;
 }
 
 

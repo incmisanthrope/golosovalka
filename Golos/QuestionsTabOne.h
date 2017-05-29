@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TableOne.h
 //  Golos
 //
 //  Created by Gleb R on 17.05.17.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface QuestionsTabOne : UITableViewController
 
+-(NSUInteger) returnChoiseCategory;
 
 @end
-

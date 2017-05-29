@@ -7,43 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F739D8A31ED41C6900C2BB10 /* tabFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F739D8A21ED41C6900C2BB10 /* tabFourViewController.m */; };
+		F717A5151ED84F4800ED3BE6 /* TabTwoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F717A5141ED84F4800ED3BE6 /* TabTwoTableViewController.m */; };
+		F717A5181ED84FBC00ED3BE6 /* AddItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F717A5171ED84FBC00ED3BE6 /* AddItemView.m */; };
 		F739D8A81ED42C8300C2BB10 /* Values.m in Sources */ = {isa = PBXBuildFile; fileRef = F739D8A71ED42C8300C2BB10 /* Values.m */; };
-		F739D8B01ED4521500C2BB10 /* TabkaTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F739D8AF1ED4521500C2BB10 /* TabkaTwoViewController.m */; };
 		F739D8D71ED4694400C2BB10 /* Cor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F739D8D51ED4694400C2BB10 /* Cor.xcdatamodeld */; };
+		F7537FC41EDBFC64004346D2 /* QuestionsTabThree.m in Sources */ = {isa = PBXBuildFile; fileRef = F7537FC31EDBFC64004346D2 /* QuestionsTabThree.m */; };
 		F7716D801ECC7B2F009DB974 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7716D7F1ECC7B2F009DB974 /* main.m */; };
 		F7716D831ECC7B2F009DB974 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7716D821ECC7B2F009DB974 /* AppDelegate.m */; };
-		F7716D861ECC7B2F009DB974 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7716D851ECC7B2F009DB974 /* ViewController.m */; };
 		F7716D891ECC7B2F009DB974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7716D871ECC7B2F009DB974 /* Main.storyboard */; };
 		F7716D8B1ECC7B2F009DB974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7716D8A1ECC7B2F009DB974 /* Assets.xcassets */; };
 		F7716D8E1ECC7B30009DB974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7716D8C1ECC7B30009DB974 /* LaunchScreen.storyboard */; };
-		F7716D971ECC7BFC009DB974 /* TableOne.m in Sources */ = {isa = PBXBuildFile; fileRef = F7716D961ECC7BFC009DB974 /* TableOne.m */; };
-		F7C79ABE1ECDB97800F628B6 /* TableTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C79ABD1ECDB97800F628B6 /* TableTwo.m */; };
+		F7716D971ECC7BFC009DB974 /* QuestionsTabOne.m in Sources */ = {isa = PBXBuildFile; fileRef = F7716D961ECC7BFC009DB974 /* QuestionsTabOne.m */; };
+		F7C79ABE1ECDB97800F628B6 /* QuestionsTabTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C79ABD1ECDB97800F628B6 /* QuestionsTabTwo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F739D8A11ED41C6900C2BB10 /* tabFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabFourViewController.h; sourceTree = "<group>"; };
-		F739D8A21ED41C6900C2BB10 /* tabFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tabFourViewController.m; sourceTree = "<group>"; };
+		F717A5131ED84F4800ED3BE6 /* TabTwoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabTwoTableViewController.h; sourceTree = "<group>"; };
+		F717A5141ED84F4800ED3BE6 /* TabTwoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabTwoTableViewController.m; sourceTree = "<group>"; };
+		F717A5161ED84FBC00ED3BE6 /* AddItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemView.h; sourceTree = "<group>"; };
+		F717A5171ED84FBC00ED3BE6 /* AddItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemView.m; sourceTree = "<group>"; };
 		F739D8A61ED42C8300C2BB10 /* Values.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Values.h; path = ../Values.h; sourceTree = "<group>"; };
 		F739D8A71ED42C8300C2BB10 /* Values.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Values.m; path = ../Values.m; sourceTree = "<group>"; };
-		F739D8AE1ED4521500C2BB10 /* TabkaTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabkaTwoViewController.h; sourceTree = "<group>"; };
-		F739D8AF1ED4521500C2BB10 /* TabkaTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabkaTwoViewController.m; sourceTree = "<group>"; };
 		F739D8B11ED463B800C2BB10 /* Golos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Golos-Bridging-Header.h"; sourceTree = "<group>"; };
 		F739D8D61ED4694400C2BB10 /* Cor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cor.xcdatamodel; sourceTree = "<group>"; };
+		F7537FC21EDBFC64004346D2 /* QuestionsTabThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsTabThree.h; sourceTree = "<group>"; };
+		F7537FC31EDBFC64004346D2 /* QuestionsTabThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsTabThree.m; sourceTree = "<group>"; };
 		F7716D7B1ECC7B2F009DB974 /* Golos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Golos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7716D7F1ECC7B2F009DB974 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7716D811ECC7B2F009DB974 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F7716D821ECC7B2F009DB974 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F7716D841ECC7B2F009DB974 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F7716D851ECC7B2F009DB974 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F7716D881ECC7B2F009DB974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7716D8A1ECC7B2F009DB974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7716D8D1ECC7B30009DB974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7716D8F1ECC7B30009DB974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7716D951ECC7BFC009DB974 /* TableOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableOne.h; sourceTree = "<group>"; };
-		F7716D961ECC7BFC009DB974 /* TableOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableOne.m; sourceTree = "<group>"; };
-		F7C79ABC1ECDB97800F628B6 /* TableTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableTwo.h; sourceTree = "<group>"; };
-		F7C79ABD1ECDB97800F628B6 /* TableTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableTwo.m; sourceTree = "<group>"; };
+		F7716D951ECC7BFC009DB974 /* QuestionsTabOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsTabOne.h; sourceTree = "<group>"; };
+		F7716D961ECC7BFC009DB974 /* QuestionsTabOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsTabOne.m; sourceTree = "<group>"; };
+		F7C79ABC1ECDB97800F628B6 /* QuestionsTabTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsTabTwo.h; sourceTree = "<group>"; };
+		F7C79ABD1ECDB97800F628B6 /* QuestionsTabTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsTabTwo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +60,8 @@
 		F739D8A01ED41C3900C2BB10 /* tabFour */ = {
 			isa = PBXGroup;
 			children = (
-				F739D8A11ED41C6900C2BB10 /* tabFourViewController.h */,
-				F739D8A21ED41C6900C2BB10 /* tabFourViewController.m */,
+				F717A5161ED84FBC00ED3BE6 /* AddItemView.h */,
+				F717A5171ED84FBC00ED3BE6 /* AddItemView.m */,
 			);
 			name = tabFour;
 			sourceTree = "<group>";
@@ -90,8 +90,6 @@
 				F79E6CD81ED810CD004ADA86 /* TabBarClassGroup */,
 				F7716D811ECC7B2F009DB974 /* AppDelegate.h */,
 				F7716D821ECC7B2F009DB974 /* AppDelegate.m */,
-				F7716D841ECC7B2F009DB974 /* ViewController.h */,
-				F7716D851ECC7B2F009DB974 /* ViewController.m */,
 				F739D8A61ED42C8300C2BB10 /* Values.h */,
 				F739D8A71ED42C8300C2BB10 /* Values.m */,
 				F7716D8A1ECC7B2F009DB974 /* Assets.xcassets */,
@@ -116,29 +114,31 @@
 			children = (
 				F739D8A01ED41C3900C2BB10 /* tabFour */,
 				F7C79ABA1ECDB76400F628B6 /* TabTwo */,
-				F7C79A961ECC8E8E00F628B6 /* TabOne */,
+				F7C79A961ECC8E8E00F628B6 /* TabQuestions */,
 			);
 			name = TabBarClassGroup;
 			path = ..;
 			sourceTree = "<group>";
 		};
-		F7C79A961ECC8E8E00F628B6 /* TabOne */ = {
+		F7C79A961ECC8E8E00F628B6 /* TabQuestions */ = {
 			isa = PBXGroup;
 			children = (
-				F7716D951ECC7BFC009DB974 /* TableOne.h */,
-				F7716D961ECC7BFC009DB974 /* TableOne.m */,
-				F7C79ABC1ECDB97800F628B6 /* TableTwo.h */,
-				F7C79ABD1ECDB97800F628B6 /* TableTwo.m */,
+				F7716D951ECC7BFC009DB974 /* QuestionsTabOne.h */,
+				F7716D961ECC7BFC009DB974 /* QuestionsTabOne.m */,
+				F7C79ABC1ECDB97800F628B6 /* QuestionsTabTwo.h */,
+				F7C79ABD1ECDB97800F628B6 /* QuestionsTabTwo.m */,
+				F7537FC21EDBFC64004346D2 /* QuestionsTabThree.h */,
+				F7537FC31EDBFC64004346D2 /* QuestionsTabThree.m */,
 			);
-			name = TabOne;
+			name = TabQuestions;
 			path = Golos;
 			sourceTree = "<group>";
 		};
 		F7C79ABA1ECDB76400F628B6 /* TabTwo */ = {
 			isa = PBXGroup;
 			children = (
-				F739D8AE1ED4521500C2BB10 /* TabkaTwoViewController.h */,
-				F739D8AF1ED4521500C2BB10 /* TabkaTwoViewController.m */,
+				F717A5141ED84F4800ED3BE6 /* TabTwoTableViewController.m */,
+				F717A5131ED84F4800ED3BE6 /* TabTwoTableViewController.h */,
 			);
 			name = TabTwo;
 			path = Golos;
@@ -218,14 +218,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F739D8D71ED4694400C2BB10 /* Cor.xcdatamodeld in Sources */,
-				F7716D861ECC7B2F009DB974 /* ViewController.m in Sources */,
 				F7716D831ECC7B2F009DB974 /* AppDelegate.m in Sources */,
 				F7716D801ECC7B2F009DB974 /* main.m in Sources */,
+				F7537FC41EDBFC64004346D2 /* QuestionsTabThree.m in Sources */,
 				F739D8A81ED42C8300C2BB10 /* Values.m in Sources */,
-				F739D8A31ED41C6900C2BB10 /* tabFourViewController.m in Sources */,
-				F739D8B01ED4521500C2BB10 /* TabkaTwoViewController.m in Sources */,
-				F7C79ABE1ECDB97800F628B6 /* TableTwo.m in Sources */,
-				F7716D971ECC7BFC009DB974 /* TableOne.m in Sources */,
+				F717A5181ED84FBC00ED3BE6 /* AddItemView.m in Sources */,
+				F7C79ABE1ECDB97800F628B6 /* QuestionsTabTwo.m in Sources */,
+				F717A5151ED84F4800ED3BE6 /* TabTwoTableViewController.m in Sources */,
+				F7716D971ECC7BFC009DB974 /* QuestionsTabOne.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
