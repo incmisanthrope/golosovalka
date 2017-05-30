@@ -24,12 +24,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35T-g1-JDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1620" y="518"/>
+            <point key="canvasLocation" x="1629" y="1307"/>
         </scene>
         <!--View Choise Picker-->
         <scene sceneID="hYk-1S-m0F">
             <objects>
-                <viewController id="5NL-56-IaC" sceneMemberID="viewController">
+                <viewController id="5NL-56-IaC" customClass="TabTwoController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FQP-5w-0bL"/>
                         <viewControllerLayoutGuide type="bottom" id="EYK-We-6xR"/>
@@ -46,6 +46,9 @@
                                 <rect key="frame" x="141" y="388" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Show"/>
+                                <connections>
+                                    <action selector="logOutButton:" destination="5NL-56-IaC" eventType="touchUpInside" id="rOj-gq-xCv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5m-e2-8eg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2595" y="518"/>
+            <point key="canvasLocation" x="2604" y="1307"/>
         </scene>
         <!--Category-->
         <scene sceneID="24e-5l-fMS">
@@ -200,7 +203,7 @@
         <!--Root View Controller-->
         <scene sceneID="mlj-r9-GLe">
             <objects>
-                <tableViewController id="bri-jY-JRP" customClass="TabTwoTableViewController" sceneMemberID="viewController">
+                <tableViewController id="bri-jY-JRP" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1ED-y1-EYs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,7 +243,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j5F-gb-dcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2580" y="1239"/>
+            <point key="canvasLocation" x="2603" y="614"/>
         </scene>
         <!--Item-->
         <scene sceneID="xtv-fs-Xp9">
@@ -299,7 +302,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyT-hE-xBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1620" y="1239"/>
+            <point key="canvasLocation" x="1643" y="614"/>
         </scene>
         <!-- Questions-->
         <scene sceneID="qv9-H0-M3J">

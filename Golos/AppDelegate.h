@@ -7,13 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-@property (readonly, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (readonly, strong) NSPersistentContainer *persistentContainer;
 
 @property (strong, nonatomic) UIWindow *window;
 
--(void) generatePlist;
+-(void) addCategoryToDataB:(NSString*)category;
+
+-(void) addQuestionToDataB:(NSString*)question;
+
+-(void) addAnswerToDataB:(NSString*)answer;
+
+-(void) logEntity;
+
+-(void) printAllFormCoreData;
 
 @end
 

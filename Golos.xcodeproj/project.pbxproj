@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F717A5151ED84F4800ED3BE6 /* TabTwoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F717A5141ED84F4800ED3BE6 /* TabTwoTableViewController.m */; };
+		F717A5151ED84F4800ED3BE6 /* TabTwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F717A5141ED84F4800ED3BE6 /* TabTwoController.m */; };
 		F717A5181ED84FBC00ED3BE6 /* AddItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F717A5171ED84FBC00ED3BE6 /* AddItemView.m */; };
+		F732328E1EDD9D3700E29A61 /* Entity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F732328D1EDD9D3700E29A61 /* Entity+CoreDataProperties.m */; };
 		F739D8A81ED42C8300C2BB10 /* Values.m in Sources */ = {isa = PBXBuildFile; fileRef = F739D8A71ED42C8300C2BB10 /* Values.m */; };
 		F739D8D71ED4694400C2BB10 /* Cor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F739D8D51ED4694400C2BB10 /* Cor.xcdatamodeld */; };
 		F7537FC41EDBFC64004346D2 /* QuestionsTabThree.m in Sources */ = {isa = PBXBuildFile; fileRef = F7537FC31EDBFC64004346D2 /* QuestionsTabThree.m */; };
@@ -22,13 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F717A5131ED84F4800ED3BE6 /* TabTwoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabTwoTableViewController.h; sourceTree = "<group>"; };
-		F717A5141ED84F4800ED3BE6 /* TabTwoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabTwoTableViewController.m; sourceTree = "<group>"; };
+		F717A5131ED84F4800ED3BE6 /* TabTwoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabTwoController.h; sourceTree = "<group>"; };
+		F717A5141ED84F4800ED3BE6 /* TabTwoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabTwoController.m; sourceTree = "<group>"; };
 		F717A5161ED84FBC00ED3BE6 /* AddItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemView.h; sourceTree = "<group>"; };
 		F717A5171ED84FBC00ED3BE6 /* AddItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemView.m; sourceTree = "<group>"; };
+		F732328C1EDD9D3700E29A61 /* Entity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Entity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F732328D1EDD9D3700E29A61 /* Entity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Entity+CoreDataProperties.m"; sourceTree = "<group>"; };
 		F739D8A61ED42C8300C2BB10 /* Values.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Values.h; path = ../Values.h; sourceTree = "<group>"; };
 		F739D8A71ED42C8300C2BB10 /* Values.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Values.m; path = ../Values.m; sourceTree = "<group>"; };
-		F739D8B11ED463B800C2BB10 /* Golos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Golos-Bridging-Header.h"; sourceTree = "<group>"; };
 		F739D8D61ED4694400C2BB10 /* Cor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cor.xcdatamodel; sourceTree = "<group>"; };
 		F7537FC21EDBFC64004346D2 /* QuestionsTabThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsTabThree.h; sourceTree = "<group>"; };
 		F7537FC31EDBFC64004346D2 /* QuestionsTabThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsTabThree.m; sourceTree = "<group>"; };
@@ -69,10 +71,11 @@
 		F7716D721ECC7B2F009DB974 = {
 			isa = PBXGroup;
 			children = (
+				F732328C1EDD9D3700E29A61 /* Entity+CoreDataProperties.h */,
+				F732328D1EDD9D3700E29A61 /* Entity+CoreDataProperties.m */,
 				F7716D7D1ECC7B2F009DB974 /* Golos */,
 				F7716D7C1ECC7B2F009DB974 /* Products */,
 				F739D8D51ED4694400C2BB10 /* Cor.xcdatamodeld */,
-				F739D8B11ED463B800C2BB10 /* Golos-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,8 +140,8 @@
 		F7C79ABA1ECDB76400F628B6 /* TabTwo */ = {
 			isa = PBXGroup;
 			children = (
-				F717A5141ED84F4800ED3BE6 /* TabTwoTableViewController.m */,
-				F717A5131ED84F4800ED3BE6 /* TabTwoTableViewController.h */,
+				F717A5131ED84F4800ED3BE6 /* TabTwoController.h */,
+				F717A5141ED84F4800ED3BE6 /* TabTwoController.m */,
 			);
 			name = TabTwo;
 			path = Golos;
@@ -170,19 +173,19 @@
 		F7716D731ECC7B2F009DB974 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GM;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = IncMisanthrope;
 				TargetAttributes = {
 					F7716D7A1ECC7B2F009DB974 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 27MP35DH9E;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = F7716D761ECC7B2F009DB974 /* Build configuration list for PBXProject "Golos" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F732328E1EDD9D3700E29A61 /* Entity+CoreDataProperties.m in Sources */,
 				F739D8D71ED4694400C2BB10 /* Cor.xcdatamodeld in Sources */,
 				F7716D831ECC7B2F009DB974 /* AppDelegate.m in Sources */,
 				F7716D801ECC7B2F009DB974 /* main.m in Sources */,
@@ -224,7 +228,7 @@
 				F739D8A81ED42C8300C2BB10 /* Values.m in Sources */,
 				F717A5181ED84FBC00ED3BE6 /* AddItemView.m in Sources */,
 				F7C79ABE1ECDB97800F628B6 /* QuestionsTabTwo.m in Sources */,
-				F717A5151ED84F4800ED3BE6 /* TabTwoTableViewController.m in Sources */,
+				F717A5151ED84F4800ED3BE6 /* TabTwoController.m in Sources */,
 				F7716D971ECC7BFC009DB974 /* QuestionsTabOne.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,7 +386,7 @@
 				F7716D911ECC7B30009DB974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F7716D921ECC7B30009DB974 /* Build configuration list for PBXNativeTarget "Golos" */ = {
 			isa = XCConfigurationList;
@@ -391,7 +395,7 @@
 				F7716D941ECC7B30009DB974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

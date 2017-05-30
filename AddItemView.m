@@ -7,6 +7,7 @@
 //
 
 #import "AddItemView.h"
+#import "AppDelegate.h"
 
 @interface AddItemView ()
 
