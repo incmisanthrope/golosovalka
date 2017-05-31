@@ -18,6 +18,32 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+        Entity *entObj;
+        NSManagedObject *managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Entity" inManagedObjectContext:self.persistentContainer.viewContext];
+        [managedObject setValue:@"one" forKey:entObj.category];
+        [managedObject setValue:@"two" forKey:entObj.questions];
+        [managedObject setValue:@"three" forKey:entObj.answer];
+    
+        [self.persistentContainer.viewContext save:nil];
+    
+    NSFetchRequest *request = [NSFetchRequest new];
+    NSError *requestError = nil;
+    NSEntityDescription *descript = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.persistentContainer.viewContext];
+    
+    [request setEntity:descript];
+    [request setResultType:NSManagedObjectResultType];
+    
+    NSError *requesError = nil;
+    NSArray *reaultArrar = [self.persistentContainer.viewContext executeFetchRequest:request error:&requestError];
+    
+    if (requestError) {
+        NSLog(@"%@", [requestError localizedDescription]);
+    }
+    
+    for (Entity* obj in reaultArrar) {
+        NSLog(@"%@ %@ %@",entObj.category, entObj.questions, entObj.answer);
+    }
 
     return YES;
 }

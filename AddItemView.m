@@ -7,7 +7,6 @@
 //
 
 #import "AddItemView.h"
-#import "AppDelegate.h"
 
 @interface AddItemView ()
 
@@ -84,5 +83,18 @@
         [addCategory show];
     }
     
+}
+- (IBAction)saveButton:(id)sender {
+    
+    AppDelegate *appDelegate = [AppDelegate new];
+//    Entity *entObj;
+//    NSManagedObject *managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Entity" inManagedObjectContext:appDelegate.persistentContainer.viewContext];
+//    [managedObject setValue:_textCategory forKey:entObj.category];
+//    [managedObject setValue:_textQuestion forKey:entObj.questions];
+//    [managedObject setValue:_textAnswer forKey:entObj.answer];
+//    
+//    [appDelegate.persistentContainer.viewContext save:nil];
+    
+    [appDelegate printAllFormCoreData];
 }
 @end
