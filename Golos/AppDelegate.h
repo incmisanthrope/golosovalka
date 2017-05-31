@@ -14,15 +14,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
--(void) addCategoryToDataB:(NSString*)category;
-
--(void) addQuestionToDataB:(NSString*)question;
-
--(void) addAnswerToDataB:(NSString*)answer;
-
--(void) logEntity;
-
--(void) printAllFormCoreData;
 
 @end
 

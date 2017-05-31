@@ -12,6 +12,4 @@
 
 @property (strong, nonatomic) NSString *question, *category;
 
--(void) saveQ:(NSString*)questi saveC:(NSString*) categ;
-
 @end

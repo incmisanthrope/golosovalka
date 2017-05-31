@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TabTwoController : UIViewController
-- (IBAction)logOutButton:(id)sender;
+@interface TabEditCategory : UITableViewController
+- (IBAction)addCategory:(id)sender;
 
 @end

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QuestionsTabThree : UITableViewController
+@interface QuestionsTabThree : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *questionTextLable;
+@property (weak, nonatomic) IBOutlet UIPickerView *answerPicker;
+- (IBAction)answerButton:(id)sender;
 
 @end

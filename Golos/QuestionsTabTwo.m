@@ -20,7 +20,9 @@
 
 @implementation QuestionsTabTwo
 
-NSInteger *userChoiseQuestion;
+NSUInteger *userChoiseQuestion;
+NSArray *arrayCategorOne, *arrayCategorTwo, *arrayCategorThree, *arrayCategorFour, *arrayCategorFive;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,13 +37,13 @@ NSInteger *userChoiseQuestion;
     [super viewWillAppear:YES];
     self.arrayCategorOne = @[@"catOne_1", @"catOne_2", @"catOne_3",@"catOne_4",@"catOne_5"];
     self.arrayCategorTwo = @[@"catTwo_1", @"catTwo_2", @"catTwo_3",@"catTwo_4",@"catTwo_5"];
-    self.arrayCategorThree  = @[@"31", @"32", @"33",@"34",@"35"];
+    self.arrayCategorThree = @[@"31", @"32", @"33",@"34",@"35"];
     self.arrayCategorFour = @[@"41", @"42", @"43",@"44",@"445"];
     self.arrayCategorFive = @[@"51", @"52", @"53",@"54",@"55"];
 
     QuestionsTabOne *questionsTabOne = [QuestionsTabOne new];
     
-    _categoryChoise = [questionsTabOne returnChoiseCategory];
+    _categoryChoise = (NSInteger *) [questionsTabOne returnChoiseCategory];
     
 }
 
@@ -87,19 +89,19 @@ NSInteger *userChoiseQuestion;
     
     switch (indexPath.row) {
         case 0:
-            userChoiseQuestion = indexPath.row;
+            userChoiseQuestion = (NSUInteger *)indexPath.row;
             break;
         case 1:
-            userChoiseQuestion = indexPath.row;
+            userChoiseQuestion = (NSUInteger *)indexPath.row;
             break;
         case 2:
-            userChoiseQuestion = indexPath.row;
+            userChoiseQuestion = (NSUInteger *)indexPath.row;
             break;
         case 3:
-            userChoiseQuestion = indexPath.row;
+            userChoiseQuestion = (NSUInteger *)indexPath.row;
             break;
         case 4:
-            userChoiseQuestion = indexPath.row;
+            userChoiseQuestion = (NSUInteger *)indexPath.row;
             break;
             
         default:
@@ -108,7 +110,7 @@ NSInteger *userChoiseQuestion;
 }
 
 -(NSUInteger) returnChoiseQuestion{
-    return userChoiseQuestion;
+    return (long)userChoiseQuestion;
 }
 
 

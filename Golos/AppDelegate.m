@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Entity+CoreDataProperties.h"
+#import "QuestionsTabOne.h"
 
 @interface AppDelegate ()
 
@@ -18,74 +19,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-        Entity *entObj;
-        NSManagedObject *managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Entity" inManagedObjectContext:self.persistentContainer.viewContext];
-        [managedObject setValue:@"one" forKey:entObj.category];
-        [managedObject setValue:@"two" forKey:entObj.questions];
-        [managedObject setValue:@"three" forKey:entObj.answer];
-    
-        [self.persistentContainer.viewContext save:nil];
-    
-    NSFetchRequest *request = [NSFetchRequest new];
-    NSError *requestError = nil;
-    NSEntityDescription *descript = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.persistentContainer.viewContext];
-    
-    [request setEntity:descript];
-    [request setResultType:NSManagedObjectResultType];
-    
-    NSError *requesError = nil;
-    NSArray *reaultArrar = [self.persistentContainer.viewContext executeFetchRequest:request error:&requestError];
-    
-    if (requestError) {
-        NSLog(@"%@", [requestError localizedDescription]);
-    }
-    
-    for (Entity* obj in reaultArrar) {
-        NSLog(@"%@ %@ %@",entObj.category, entObj.questions, entObj.answer);
-    }
 
     return YES;
 }
 
--(void) addCategoryToDataB:(NSString*)category{
-    NSManagedObject *managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Entity" inManagedObjectContext:self.persistentContainer.viewContext];
-    [managedObject setValue:category forKey:@"category"];
-}
-
--(void) addQuestionToDataB:(NSString*)question{
-    NSManagedObject *managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Entity" inManagedObjectContext:self.persistentContainer.viewContext];
-    [managedObject setValue:question forKey:@"questions"];
-}
-
--(void) addAnswerToDataB:(NSString*)answer{
-    NSManagedObject *managedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Entity" inManagedObjectContext:self.persistentContainer.viewContext];
-    [managedObject setValue:answer forKey:@"answer"];
-}
-
--(void) logEntity{
-    NSLog(@"%@", [Entity fetchRequest]);
-}
-
--(void) printAllFormCoreData{
-    NSFetchRequest *request = [NSFetchRequest new];
-    NSError *requestError = nil;
-    NSEntityDescription *descript = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.persistentContainer.viewContext];
-    
-    [request setEntity:descript];
-    
-    NSError *requesError = nil;
-    NSArray *reaultArrar = [self.persistentContainer.viewContext executeFetchRequest:request error:&requestError];
-    
-    if (requestError) {
-        NSLog(@"%@", [requestError localizedDescription]);
-    }
-    
-    for (Entity* obj in reaultArrar) {
-        NSLog(@"%@ %@ %@",obj.category, obj.questions, obj.answer);
-    }
-    
-}
 
 #pragma mark - Core Data stack
 
