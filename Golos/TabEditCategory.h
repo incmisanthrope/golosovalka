@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TabEditCategory : UITableViewController
-- (IBAction)addCategory:(id)sender;
+
 
 @end

@@ -8,6 +8,7 @@
 
 #import "QuestionsTabOne.h"
 #import "QuestionsTabTwo.h"
+#import "Values.h"
 
 @interface QuestionsTabOne ()
 
@@ -21,12 +22,16 @@ NSMutableArray *arrayTableCategory;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
 }
+
+
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    _arrayTableCategory = [NSMutableArray arrayWithArray: @[@"One", @"Two", @"Three", @"Four", @"Five"]];
+    Values* values = [Values new];
+    arrayTableCategory = [values arrayTableCategoryV];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+    NSLog(@"%@", arrayTableCategory);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,7 +43,7 @@ NSMutableArray *arrayTableCategory;
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return  self.arrayTableCategory.count;
+    return  arrayTableCategory.count;
 }
 
 
@@ -46,11 +51,12 @@ NSMutableArray *arrayTableCategory;
         
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellCategory" forIndexPath:indexPath];
 
-    NSString *stingCell = [_arrayTableCategory objectAtIndex:indexPath.row];
+    NSString *stingCell = [arrayTableCategory objectAtIndex:indexPath.row];
     cell.textLabel.text = stingCell;
     
     return cell;
 }
+
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

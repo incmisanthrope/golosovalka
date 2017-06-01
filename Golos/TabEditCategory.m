@@ -7,13 +7,18 @@
 //
 
 #import "TabEditCategory.h"
+#import "Values.h"
 
 @interface TabEditCategory ()
 
+@property (strong, nonatomic) NSMutableArray *arrayMutab;
+@property (assign, nonatomic) NSUInteger *idCategor;
 
 @end
 
 @implementation TabEditCategory
+
+NSUInteger* idCategory;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,54 +27,46 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    
+    Values *value = [Values new];
+    _arrayMutab = [NSMutableArray arrayWithArray:[value arrayTableCategoryV]];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
 }
-
-
 
 #pragma mark - Table view data source
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return _arrayMutab.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell3" forIndexPath:indexPath];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellEditCategory" forIndexPath:indexPath];
+    NSString* stringForCell = [_arrayMutab objectAtIndex:indexPath.row];
+    cell.textLabel.text = stringForCell;
     return cell;
 }
 
-
-- (IBAction)addCategory:(id)sender {
-    UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle:@"SW"
-                                 message:@"Выбери сторону"
-                                 preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction* yesButton = [UIAlertAction
-                                actionWithTitle:@"Светлая"
-                                style:UIAlertActionStyleDefault
-                                handler:^(UIAlertAction * action) {
-                                    NSLog(@"Light side");
-                                }];
-    
-    UIAlertAction* noButton = [UIAlertAction
-                               actionWithTitle:@"Темная"
-                               style:UIAlertActionStyleDefault
-                               handler:^(UIAlertAction * action) {
-                                   NSLog(@"Dark side");
-                               }];
-    
-    [alert addAction:yesButton];
-    [alert addAction:noButton];
-    
-    [self presentViewController:alert animated:YES completion:nil];
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
+
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Values *value = [Values new];
+        [value deleteItemInArrayCategory:(NSUInteger*)indexPath.row];
+        _arrayMutab = [value arrayTableCategoryV];
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
 @end

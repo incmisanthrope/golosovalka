@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F717A5151ED84F4800ED3BE6 /* TabEditCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F717A5141ED84F4800ED3BE6 /* TabEditCategory.m */; };
-		F717A5181ED84FBC00ED3BE6 /* AddItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F717A5171ED84FBC00ED3BE6 /* AddItemView.m */; };
-		F732328E1EDD9D3700E29A61 /* Entity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F732328D1EDD9D3700E29A61 /* Entity+CoreDataProperties.m */; };
 		F739D8A81ED42C8300C2BB10 /* Values.m in Sources */ = {isa = PBXBuildFile; fileRef = F739D8A71ED42C8300C2BB10 /* Values.m */; };
 		F739D8D71ED4694400C2BB10 /* Cor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F739D8D51ED4694400C2BB10 /* Cor.xcdatamodeld */; };
 		F7537FC41EDBFC64004346D2 /* QuestionsTabThree.m in Sources */ = {isa = PBXBuildFile; fileRef = F7537FC31EDBFC64004346D2 /* QuestionsTabThree.m */; };
@@ -20,15 +18,12 @@
 		F7716D8E1ECC7B30009DB974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7716D8C1ECC7B30009DB974 /* LaunchScreen.storyboard */; };
 		F7716D971ECC7BFC009DB974 /* QuestionsTabOne.m in Sources */ = {isa = PBXBuildFile; fileRef = F7716D961ECC7BFC009DB974 /* QuestionsTabOne.m */; };
 		F7C79ABE1ECDB97800F628B6 /* QuestionsTabTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C79ABD1ECDB97800F628B6 /* QuestionsTabTwo.m */; };
+		F7F77F1F1EE06BD300AB3976 /* GQuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F77F1E1EE06BD300AB3976 /* GQuestionTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F717A5131ED84F4800ED3BE6 /* TabEditCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabEditCategory.h; sourceTree = "<group>"; };
 		F717A5141ED84F4800ED3BE6 /* TabEditCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabEditCategory.m; sourceTree = "<group>"; };
-		F717A5161ED84FBC00ED3BE6 /* AddItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemView.h; sourceTree = "<group>"; };
-		F717A5171ED84FBC00ED3BE6 /* AddItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemView.m; sourceTree = "<group>"; };
-		F732328C1EDD9D3700E29A61 /* Entity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Entity+CoreDataProperties.h"; sourceTree = "<group>"; };
-		F732328D1EDD9D3700E29A61 /* Entity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Entity+CoreDataProperties.m"; sourceTree = "<group>"; };
 		F739D8A61ED42C8300C2BB10 /* Values.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Values.h; path = ../Values.h; sourceTree = "<group>"; };
 		F739D8A71ED42C8300C2BB10 /* Values.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Values.m; path = ../Values.m; sourceTree = "<group>"; };
 		F739D8D61ED4694400C2BB10 /* Cor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cor.xcdatamodel; sourceTree = "<group>"; };
@@ -46,6 +41,8 @@
 		F7716D961ECC7BFC009DB974 /* QuestionsTabOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsTabOne.m; sourceTree = "<group>"; };
 		F7C79ABC1ECDB97800F628B6 /* QuestionsTabTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsTabTwo.h; sourceTree = "<group>"; };
 		F7C79ABD1ECDB97800F628B6 /* QuestionsTabTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsTabTwo.m; sourceTree = "<group>"; };
+		F7F77F1D1EE06BD300AB3976 /* GQuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQuestionTableViewController.h; sourceTree = "<group>"; };
+		F7F77F1E1EE06BD300AB3976 /* GQuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQuestionTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,20 +56,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F739D8A01ED41C3900C2BB10 /* tabFour */ = {
-			isa = PBXGroup;
-			children = (
-				F717A5161ED84FBC00ED3BE6 /* AddItemView.h */,
-				F717A5171ED84FBC00ED3BE6 /* AddItemView.m */,
-			);
-			name = tabFour;
-			sourceTree = "<group>";
-		};
 		F7716D721ECC7B2F009DB974 = {
 			isa = PBXGroup;
 			children = (
-				F732328C1EDD9D3700E29A61 /* Entity+CoreDataProperties.h */,
-				F732328D1EDD9D3700E29A61 /* Entity+CoreDataProperties.m */,
 				F7716D7D1ECC7B2F009DB974 /* Golos */,
 				F7716D7C1ECC7B2F009DB974 /* Products */,
 				F739D8D51ED4694400C2BB10 /* Cor.xcdatamodeld */,
@@ -115,7 +101,6 @@
 		F79E6CD81ED810CD004ADA86 /* TabBarClassGroup */ = {
 			isa = PBXGroup;
 			children = (
-				F739D8A01ED41C3900C2BB10 /* tabFour */,
 				F7C79ABA1ECDB76400F628B6 /* TabTwo */,
 				F7C79A961ECC8E8E00F628B6 /* TabQuestions */,
 			);
@@ -142,6 +127,8 @@
 			children = (
 				F717A5131ED84F4800ED3BE6 /* TabEditCategory.h */,
 				F717A5141ED84F4800ED3BE6 /* TabEditCategory.m */,
+				F7F77F1D1EE06BD300AB3976 /* GQuestionTableViewController.h */,
+				F7F77F1E1EE06BD300AB3976 /* GQuestionTableViewController.m */,
 			);
 			name = TabTwo;
 			path = Golos;
@@ -220,13 +207,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F732328E1EDD9D3700E29A61 /* Entity+CoreDataProperties.m in Sources */,
 				F739D8D71ED4694400C2BB10 /* Cor.xcdatamodeld in Sources */,
 				F7716D831ECC7B2F009DB974 /* AppDelegate.m in Sources */,
+				F7F77F1F1EE06BD300AB3976 /* GQuestionTableViewController.m in Sources */,
 				F7716D801ECC7B2F009DB974 /* main.m in Sources */,
 				F7537FC41EDBFC64004346D2 /* QuestionsTabThree.m in Sources */,
 				F739D8A81ED42C8300C2BB10 /* Values.m in Sources */,
-				F717A5181ED84FBC00ED3BE6 /* AddItemView.m in Sources */,
 				F7C79ABE1ECDB97800F628B6 /* QuestionsTabTwo.m in Sources */,
 				F717A5151ED84F4800ED3BE6 /* TabEditCategory.m in Sources */,
 				F7716D971ECC7BFC009DB974 /* QuestionsTabOne.m in Sources */,

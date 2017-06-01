@@ -35,11 +35,11 @@ NSArray *arrayCategorOne, *arrayCategorTwo, *arrayCategorThree, *arrayCategorFou
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    self.arrayCategorOne = @[@"catOne_1", @"catOne_2", @"catOne_3",@"catOne_4",@"catOne_5"];
-    self.arrayCategorTwo = @[@"catTwo_1", @"catTwo_2", @"catTwo_3",@"catTwo_4",@"catTwo_5"];
-    self.arrayCategorThree = @[@"31", @"32", @"33",@"34",@"35"];
-    self.arrayCategorFour = @[@"41", @"42", @"43",@"44",@"445"];
-    self.arrayCategorFive = @[@"51", @"52", @"53",@"54",@"55"];
+    arrayCategorOne = @[@"catOne_1", @"catOne_2", @"catOne_3",@"catOne_4",@"catOne_5"];
+    arrayCategorTwo = @[@"catTwo_1", @"catTwo_2", @"catTwo_3",@"catTwo_4",@"catTwo_5"];
+    arrayCategorThree = @[@"31", @"32", @"33",@"34",@"35"];
+    arrayCategorFour = @[@"41", @"42", @"43",@"44",@"445"];
+    arrayCategorFive = @[@"51", @"52", @"53",@"54",@"55"];
 
     QuestionsTabOne *questionsTabOne = [QuestionsTabOne new];
     
@@ -113,6 +113,9 @@ NSArray *arrayCategorOne, *arrayCategorTwo, *arrayCategorThree, *arrayCategorFou
     return (long)userChoiseQuestion;
 }
 
+-(NSMutableArray*) returnArrayQuestions{
+    return 0;
+}
 
 
 @end
