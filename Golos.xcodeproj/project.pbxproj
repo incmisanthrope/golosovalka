@@ -19,6 +19,7 @@
 		F7716D971ECC7BFC009DB974 /* QuestionsTabOne.m in Sources */ = {isa = PBXBuildFile; fileRef = F7716D961ECC7BFC009DB974 /* QuestionsTabOne.m */; };
 		F7C79ABE1ECDB97800F628B6 /* QuestionsTabTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C79ABD1ECDB97800F628B6 /* QuestionsTabTwo.m */; };
 		F7F77F1F1EE06BD300AB3976 /* GQuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F77F1E1EE06BD300AB3976 /* GQuestionTableViewController.m */; };
+		F7F77F221EE0706C00AB3976 /* GAddCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F77F211EE0706C00AB3976 /* GAddCategoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		F7C79ABD1ECDB97800F628B6 /* QuestionsTabTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsTabTwo.m; sourceTree = "<group>"; };
 		F7F77F1D1EE06BD300AB3976 /* GQuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQuestionTableViewController.h; sourceTree = "<group>"; };
 		F7F77F1E1EE06BD300AB3976 /* GQuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQuestionTableViewController.m; sourceTree = "<group>"; };
+		F7F77F201EE0706C00AB3976 /* GAddCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAddCategoryViewController.h; sourceTree = "<group>"; };
+		F7F77F211EE0706C00AB3976 /* GAddCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAddCategoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				F717A5141ED84F4800ED3BE6 /* TabEditCategory.m */,
 				F7F77F1D1EE06BD300AB3976 /* GQuestionTableViewController.h */,
 				F7F77F1E1EE06BD300AB3976 /* GQuestionTableViewController.m */,
+				F7F77F201EE0706C00AB3976 /* GAddCategoryViewController.h */,
+				F7F77F211EE0706C00AB3976 /* GAddCategoryViewController.m */,
 			);
 			name = TabTwo;
 			path = Golos;
@@ -215,6 +220,7 @@
 				F739D8A81ED42C8300C2BB10 /* Values.m in Sources */,
 				F7C79ABE1ECDB97800F628B6 /* QuestionsTabTwo.m in Sources */,
 				F717A5151ED84F4800ED3BE6 /* TabEditCategory.m in Sources */,
+				F7F77F221EE0706C00AB3976 /* GAddCategoryViewController.m in Sources */,
 				F7716D971ECC7BFC009DB974 /* QuestionsTabOne.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
