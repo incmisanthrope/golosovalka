@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) NSMutableArray *arrayMutab;
 @property (assign, nonatomic) NSUInteger *idCategor;
+- (IBAction)longPressEditCategory:(id)sender;
 
 @end
 
@@ -21,8 +22,9 @@
 NSUInteger* idCategory;
 
 - (void)viewDidLoad {
+    self.title = @"Gleb";
     [super viewDidLoad];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,6 +49,10 @@ NSUInteger* idCategory;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellEditCategory" forIndexPath:indexPath];
     NSString* stringForCell = [_arrayMutab objectAtIndex:indexPath.row];
     cell.textLabel.text = stringForCell;
+    
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressEditCategory:)];
+    [self.tableView addGestureRecognizer:longPress];
+    
     return cell;
 }
 
@@ -68,5 +74,12 @@ NSUInteger* idCategory;
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
+
+- (IBAction)longPressEditCategory:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *testViewController = [storyboard  instantiateViewControllerWithIdentifier:@"EditCategoryScreen"];
+    [self.navigationController pushViewController:testViewController animated:YES];
+}
+
 
 @end

@@ -8,7 +8,7 @@
 
 #import "QuestionsTabTwo.h"
 #import "QuestionsTabOne.h"
-
+#import "Values.h"
 
 @interface QuestionsTabTwo ()
 @property (strong, nonatomic) NSArray *arrayCategorOne, *arrayCategorTwo, *arrayCategorThree, *arrayCategorFour, *arrayCategorFive;
