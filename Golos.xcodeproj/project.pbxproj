@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F70943661EE14688007FF1B3 /* GEditCAtegoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F70943651EE14688007FF1B3 /* GEditCAtegoryViewController.m */; };
+		F70943691EE17FA6007FF1B3 /* GAddQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F70943681EE17FA6007FF1B3 /* GAddQuestionViewController.m */; };
 		F717A5151ED84F4800ED3BE6 /* TabEditCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F717A5141ED84F4800ED3BE6 /* TabEditCategory.m */; };
 		F739D8A81ED42C8300C2BB10 /* Values.m in Sources */ = {isa = PBXBuildFile; fileRef = F739D8A71ED42C8300C2BB10 /* Values.m */; };
 		F739D8D71ED4694400C2BB10 /* Cor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F739D8D51ED4694400C2BB10 /* Cor.xcdatamodeld */; };
@@ -23,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F70943641EE14688007FF1B3 /* GEditCAtegoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEditCAtegoryViewController.h; sourceTree = "<group>"; };
+		F70943651EE14688007FF1B3 /* GEditCAtegoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEditCAtegoryViewController.m; sourceTree = "<group>"; };
+		F70943671EE17FA6007FF1B3 /* GAddQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAddQuestionViewController.h; sourceTree = "<group>"; };
+		F70943681EE17FA6007FF1B3 /* GAddQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAddQuestionViewController.m; sourceTree = "<group>"; };
 		F717A5131ED84F4800ED3BE6 /* TabEditCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabEditCategory.h; sourceTree = "<group>"; };
 		F717A5141ED84F4800ED3BE6 /* TabEditCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabEditCategory.m; sourceTree = "<group>"; };
 		F739D8A61ED42C8300C2BB10 /* Values.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Values.h; path = ../Values.h; sourceTree = "<group>"; };
@@ -134,6 +140,10 @@
 				F7F77F1E1EE06BD300AB3976 /* GQuestionTableViewController.m */,
 				F7F77F201EE0706C00AB3976 /* GAddCategoryViewController.h */,
 				F7F77F211EE0706C00AB3976 /* GAddCategoryViewController.m */,
+				F70943641EE14688007FF1B3 /* GEditCAtegoryViewController.h */,
+				F70943651EE14688007FF1B3 /* GEditCAtegoryViewController.m */,
+				F70943671EE17FA6007FF1B3 /* GAddQuestionViewController.h */,
+				F70943681EE17FA6007FF1B3 /* GAddQuestionViewController.m */,
 			);
 			name = TabTwo;
 			path = Golos;
@@ -214,6 +224,7 @@
 			files = (
 				F739D8D71ED4694400C2BB10 /* Cor.xcdatamodeld in Sources */,
 				F7716D831ECC7B2F009DB974 /* AppDelegate.m in Sources */,
+				F70943691EE17FA6007FF1B3 /* GAddQuestionViewController.m in Sources */,
 				F7F77F1F1EE06BD300AB3976 /* GQuestionTableViewController.m in Sources */,
 				F7716D801ECC7B2F009DB974 /* main.m in Sources */,
 				F7537FC41EDBFC64004346D2 /* QuestionsTabThree.m in Sources */,
@@ -222,6 +233,7 @@
 				F717A5151ED84F4800ED3BE6 /* TabEditCategory.m in Sources */,
 				F7F77F221EE0706C00AB3976 /* GAddCategoryViewController.m in Sources */,
 				F7716D971ECC7BFC009DB974 /* QuestionsTabOne.m in Sources */,
+				F70943661EE14688007FF1B3 /* GEditCAtegoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

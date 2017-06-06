@@ -10,5 +10,6 @@
 
 @interface TabEditCategory : UITableViewController
 
+- (IBAction)longPressEditCategory:(id)sender;
 
 @end

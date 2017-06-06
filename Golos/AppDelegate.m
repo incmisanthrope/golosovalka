@@ -12,6 +12,8 @@
 
 @interface AppDelegate ()
 
+@property (strong, nonatomic) NSDictionary *dick;
+
 @end
 
 @implementation AppDelegate
@@ -20,6 +22,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    NSArray *array = @[@"1", @"2"];
+    NSDictionary *dick = [[NSDictionary alloc] initWithObjectsAndKeys:array, @"1", nil];
+    NSLog(@"%@", [dick valueForKey:@"1"]);
+    
     return YES;
 }
 

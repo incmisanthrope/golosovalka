@@ -13,11 +13,19 @@
 @property (strong, nonatomic) NSString *question, *category;
 
 -(NSMutableArray *)arrayTableCategoryV;
+
 -(void) deleteItemInArrayCategory:(NSUInteger*)numberItem;
--(void) addItemInArrayCategory:(NSString*)insertString;
-
-//-(void) addItmeInArrayQuestion:(NSString*)stringQuestion;
-
+-(void) addItemInArrayCategory:(NSString*)insertValue;
 -(NSMutableArray*) returnCategoryArray;
+-(NSInteger*) returnItemCategory:(NSInteger*)itemNum;
+
+-(NSMutableArray*) arrayTableQuestionsV:(NSInteger*)keyQuestion;
+-(void) addItmeInArrayQuestion:(NSInteger*)keyCategory question:(NSString*)stringQuestion;
+-(void) deleteItemTableQuestionsV:(NSInteger*)categoryQuestionKey itemId:(NSInteger*)questionValue;
+-(NSMutableArray*) returnQuestionForCategory:(NSInteger*)category;
+
+
+-(void) setIdCategory:(NSInteger*)categoryName;
+-(NSInteger*) returnCategoryName;
 
 @end

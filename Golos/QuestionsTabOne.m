@@ -17,7 +17,7 @@
 
 @implementation QuestionsTabOne
 
-NSUInteger *userChoiseCategory;
+NSInteger *userChoiseCategory;
 NSMutableArray *arrayTableCategory;
 
 - (void)viewDidLoad {
@@ -60,7 +60,7 @@ NSMutableArray *arrayTableCategory;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    userChoiseCategory = indexPath.row;
+    userChoiseCategory = (NSInteger*)indexPath.row;
     NSLog(@"%ld", (long)userChoiseCategory);
 }
 

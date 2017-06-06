@@ -10,4 +10,6 @@
 
 @interface GQuestionTableViewController : UITableViewController
 
+-(NSString*) returnCategory;
+
 @end

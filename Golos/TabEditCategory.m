@@ -11,18 +11,18 @@
 
 @interface TabEditCategory ()
 
-@property (strong, nonatomic) NSMutableArray *arrayMutab;
-@property (assign, nonatomic) NSUInteger *idCategor;
+@property (strong, nonatomic) NSMutableArray *arrayCategory;
 - (IBAction)longPressEditCategory:(id)sender;
+@property (strong, nonatomic) Values* values;
 
 @end
 
 @implementation TabEditCategory
 
-NSUInteger* idCategory;
+NSString* idCategoryInEdit;
 
 - (void)viewDidLoad {
-    self.title = @"Gleb";
+//    self.title = @"Gleb";
     [super viewDidLoad];
     
 }
@@ -34,7 +34,7 @@ NSUInteger* idCategory;
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
     Values *value = [Values new];
-    _arrayMutab = [NSMutableArray arrayWithArray:[value arrayTableCategoryV]];
+    _arrayCategory = [NSMutableArray arrayWithArray:[value arrayTableCategoryV]];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
 }
 
@@ -42,16 +42,14 @@ NSUInteger* idCategory;
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _arrayMutab.count;
+    return _arrayCategory.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellEditCategory" forIndexPath:indexPath];
-    NSString* stringForCell = [_arrayMutab objectAtIndex:indexPath.row];
+    NSString *stringForCell = [_arrayCategory objectAtIndex:indexPath.row];
     cell.textLabel.text = stringForCell;
     
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressEditCategory:)];
-    [self.tableView addGestureRecognizer:longPress];
     
     return cell;
 }
@@ -59,6 +57,12 @@ NSUInteger* idCategory;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    idCategoryInEdit = _arrayCategory[indexPath.row];
+    Values *values = [Values new];
+    [values setIdCategory:(NSInteger*)indexPath.row];
+    NSLog(@"%ld", (long)[values returnCategoryName]);
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressEditCategory:)];
+    [self.tableView addGestureRecognizer:longPress];
 }
 
 
@@ -70,10 +74,11 @@ NSUInteger* idCategory;
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         Values *value = [Values new];
         [value deleteItemInArrayCategory:(NSUInteger*)indexPath.row];
-        _arrayMutab = [value arrayTableCategoryV];
+        _arrayCategory = [value arrayTableCategoryV];
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
+
 
 - (IBAction)longPressEditCategory:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
