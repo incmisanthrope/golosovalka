@@ -10,22 +10,29 @@
 
 @interface Values : NSObject
 
++(Values*) sharedValues;
+
 @property (strong, nonatomic) NSString *question, *category;
+@property (strong, nonatomic) NSMutableArray *arrayCatQustion, *arrayCategorys, *arrayQuestions, *questionFromCategory, *tempArray, *arrayTableCategory1, *temp;
+@property (strong, nonatomic) NSMutableDictionary *dictQuestions;
+@property (assign, nonatomic) NSInteger *idCategory, *categoryCount;
 
 -(NSMutableArray *)arrayTableCategoryV;
 
 -(void) deleteItemInArrayCategory:(NSUInteger*)numberItem;
 -(void) addItemInArrayCategory:(NSString*)insertValue;
--(NSMutableArray*) returnCategoryArray;
--(NSInteger*) returnItemCategory:(NSInteger*)itemNum;
 
--(NSMutableArray*) arrayTableQuestionsV:(NSInteger*)keyQuestion;
--(void) addItmeInArrayQuestion:(NSInteger*)keyCategory question:(NSString*)stringQuestion;
+-(void) addItmeInArrayQuestion:(NSString*)stringQuestion;
 -(void) deleteItemTableQuestionsV:(NSInteger*)categoryQuestionKey itemId:(NSInteger*)questionValue;
--(NSMutableArray*) returnQuestionForCategory:(NSInteger*)category;
 
 
 -(void) setIdCategory:(NSInteger*)categoryName;
 -(NSInteger*) returnCategoryName;
+
+
+-(void) initArrays;
+
+-(NSMutableArray*) returnQuestionFromCategory:(NSString*)categoryQuestion;
+
 
 @end

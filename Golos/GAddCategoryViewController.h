@@ -10,7 +10,9 @@
 
 @interface GAddCategoryViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *textCategorName;
-- (IBAction)saveNewCategory:(id)sender;
-- (IBAction)alertViewButton:(id)sender;
+@property (strong, nonatomic) NSMutableArray *arrayCategoryEdit;
+
+@property (strong, nonatomic) NSMutableArray* arrayCatergory;
+
 
 @end

@@ -28,8 +28,7 @@ NSMutableArray *arrayTableCategory;
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    Values* values = [Values new];
-    arrayTableCategory = [values arrayTableCategoryV];
+    arrayTableCategory = [[Values sharedValues]arrayTableCategoryV];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     NSLog(@"%@", arrayTableCategory);
 }

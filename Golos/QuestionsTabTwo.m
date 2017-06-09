@@ -20,10 +20,6 @@
 
 @implementation QuestionsTabTwo
 
-NSUInteger *userChoiseQuestion;
-NSArray *arrayCategorOne, *arrayCategorTwo, *arrayCategorThree, *arrayCategorFour, *arrayCategorFive;
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
@@ -35,50 +31,21 @@ NSArray *arrayCategorOne, *arrayCategorTwo, *arrayCategorThree, *arrayCategorFou
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    arrayCategorOne = @[@"catOne_1", @"catOne_2", @"catOne_3",@"catOne_4",@"catOne_5"];
-    arrayCategorTwo = @[@"catTwo_1", @"catTwo_2", @"catTwo_3",@"catTwo_4",@"catTwo_5"];
-    arrayCategorThree = @[@"31", @"32", @"33",@"34",@"35"];
-    arrayCategorFour = @[@"41", @"42", @"43",@"44",@"445"];
-    arrayCategorFive = @[@"51", @"52", @"53",@"54",@"55"];
-
-    QuestionsTabOne *questionsTabOne = [QuestionsTabOne new];
-    
-    _categoryChoise = (NSInteger *) [questionsTabOne returnChoiseCategory];
-    
+    _arrayCategorQuestion = [[Values sharedValues]arrayQuestions];
 }
 
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.arrayCategorOne.count;
+    return self.arrayCategorQuestion.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellQuestion" forIndexPath:indexPath];
-
     
-    switch ((long)_categoryChoise) {
-        case 0:
-            _strTableViewCell = [_arrayCategorOne objectAtIndex:indexPath.row];
-            break;
-        
-        case 1:
-            _strTableViewCell = [_arrayCategorTwo objectAtIndex:indexPath.row];
-            break;
-        case 2:
-            _strTableViewCell = [_arrayCategorThree objectAtIndex:indexPath.row];
-            break;
-        case 3:
-            _strTableViewCell = [_arrayCategorFour objectAtIndex:indexPath.row];
-            break;
-        case 4:
-            _strTableViewCell = [_arrayCategorFive objectAtIndex:indexPath.row];
-            break;
-    }
-    
-
+    _strTableViewCell = [_arrayCategorQuestion objectAtIndex:indexPath.row];
     cell.textLabel.text = _strTableViewCell;
     
     return cell;
@@ -87,31 +54,8 @@ NSArray *arrayCategorOne, *arrayCategorTwo, *arrayCategorThree, *arrayCategorFou
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    switch (indexPath.row) {
-        case 0:
-            userChoiseQuestion = (NSUInteger *)indexPath.row;
-            break;
-        case 1:
-            userChoiseQuestion = (NSUInteger *)indexPath.row;
-            break;
-        case 2:
-            userChoiseQuestion = (NSUInteger *)indexPath.row;
-            break;
-        case 3:
-            userChoiseQuestion = (NSUInteger *)indexPath.row;
-            break;
-        case 4:
-            userChoiseQuestion = (NSUInteger *)indexPath.row;
-            break;
-            
-        default:
-            break;
-    }
 }
 
--(NSUInteger) returnChoiseQuestion{
-    return (long)userChoiseQuestion;
-}
 
 -(NSMutableArray*) returnArrayQuestions{
     return 0;

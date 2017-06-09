@@ -8,23 +8,30 @@
 
 #import "TabEditCategory.h"
 #import "Values.h"
+#import "GQuestionTableViewController.h"
+#import "GAddCategoryViewController.h"
 
 @interface TabEditCategory ()
 
-@property (strong, nonatomic) NSMutableArray *arrayCategory;
-- (IBAction)longPressEditCategory:(id)sender;
-@property (strong, nonatomic) Values* values;
 
 @end
 
 @implementation TabEditCategory
 
-NSString* idCategoryInEdit;
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    GQuestionTableViewController *questionController = (GQuestionTableViewController*)segue.destinationViewController;
+    GAddCategoryViewController *addCategryController = (GAddCategoryViewController*)segue.destinationViewController;
+    if ([[segue identifier] isEqualToString:@"Question"]) {
+        questionController.idCategoryInTab = [[Values sharedValues]category];
+    }
+    if ([[segue identifier] isEqualToString:@"AddCategory"]) {
+        addCategryController.arrayCatergory = self.arrayCategory;
+    }
+}
 
 - (void)viewDidLoad {
-//    self.title = @"Gleb";
     [super viewDidLoad];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,14 +41,17 @@ NSString* idCategoryInEdit;
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
     Values *value = [Values new];
-    _arrayCategory = [NSMutableArray arrayWithArray:[value arrayTableCategoryV]];
+    [value initArrays];
+    _arrayCategory = [NSMutableArray arrayWithArray:[[Values sharedValues]arrayTableCategoryV]];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+    NSLog(@"Обновка вьюшки  %@", [[Values sharedValues]arrayTableCategoryV]);
 }
 
 #pragma mark - Table view data source
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    [[Values sharedValues]setCategoryCount:(long)_arrayCategory.count];
     return _arrayCategory.count;
 }
 
@@ -57,10 +67,9 @@ NSString* idCategoryInEdit;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    idCategoryInEdit = _arrayCategory[indexPath.row];
-    Values *values = [Values new];
-    [values setIdCategory:(NSInteger*)indexPath.row];
-    NSLog(@"%ld", (long)[values returnCategoryName]);
+    [[Values sharedValues]setIdCategory:(NSInteger*)indexPath.row];
+    [[Values sharedValues]setCategory:[_arrayCategory objectAtIndex:indexPath.row]];
+    NSLog(@"ID CATEGORY IN EDIT %ld", (long)[[Values sharedValues]idCategory]);
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressEditCategory:)];
     [self.tableView addGestureRecognizer:longPress];
 }
@@ -75,8 +84,8 @@ NSString* idCategoryInEdit;
         Values *value = [Values new];
         [value deleteItemInArrayCategory:(NSUInteger*)indexPath.row];
         _arrayCategory = [value arrayTableCategoryV];
-        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     }
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 

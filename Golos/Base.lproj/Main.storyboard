@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G12b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jkQ-tc-wGj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jkQ-tc-wGj">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,7 +28,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pz4-vW-G8e">
-                                            <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -68,7 +69,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kmF-aQ-ARB">
-                                            <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -205,7 +206,7 @@
         <!--Add Category View Controller-->
         <scene sceneID="Xt0-A0-xTs">
             <objects>
-                <viewController id="WUO-xc-oG3" customClass="GAddCategoryViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addCategorySceen" id="WUO-xc-oG3" customClass="GAddCategoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eXo-qy-fpo"/>
                         <viewControllerLayoutGuide type="bottom" id="jLG-SE-n4L"/>
@@ -218,7 +219,7 @@
                                 <rect key="frame" x="81" y="234" width="158" height="30"/>
                                 <state key="normal" title="Сохранить"/>
                                 <connections>
-                                    <action selector="saveNewCategory:" destination="WUO-xc-oG3" eventType="touchUpInside" id="sf4-3W-lX2"/>
+                                    <action selector="saveCategoryButton:" destination="WUO-xc-oG3" eventType="touchUpInside" id="eWI-kt-8oL"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя категории" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WlN-83-Cso">
@@ -313,7 +314,7 @@
         <!--Category-->
         <scene sceneID="mlj-r9-GLe">
             <objects>
-                <tableViewController id="bri-jY-JRP" customClass="TabEditCategory" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="tabEditCategory" id="bri-jY-JRP" customClass="TabEditCategory" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1ED-y1-EYs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -327,7 +328,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DKX-C2-K29">
-                                            <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <gestureRecognizers/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -340,7 +341,10 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Gk4-yO-wl0" kind="show" id="JfS-RL-gO3"/>
+                                    <segue destination="Gk4-yO-wl0" kind="show" identifier="Question" id="JfS-RL-gO3">
+                                        <segue key="commit" inheritsFrom="parent" id="gev-3b-dEy"/>
+                                        <segue key="preview" inheritsFrom="commit" id="JgH-kt-E82"/>
+                                    </segue>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -352,7 +356,7 @@
                     <navigationItem key="navigationItem" title="Category" id="9WJ-75-bHX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="znT-aM-jQf">
                             <connections>
-                                <segue destination="WUO-xc-oG3" kind="show" id="Tdn-gT-hFz"/>
+                                <segue destination="WUO-xc-oG3" kind="show" identifier="AddCategory" id="Tdn-gT-hFz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -369,7 +373,7 @@
         <!--Question-->
         <scene sceneID="Fex-1o-XVT">
             <objects>
-                <tableViewController id="Gk4-yO-wl0" customClass="GQuestionTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Questions" id="Gk4-yO-wl0" customClass="GQuestionTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="scX-AG-3oq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -383,7 +387,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YTW-bK-F0q">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="289" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -430,7 +434,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u2c-eL-8IN">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="289" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -513,4 +517,7 @@
             <point key="canvasLocation" x="506" y="1658"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JfS-RL-gO3"/>
+    </inferredMetricsTieBreakers>
 </document>

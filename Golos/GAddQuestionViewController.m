@@ -7,9 +7,9 @@
 //
 
 #import "GAddQuestionViewController.h"
-#import "Values.h"
 #import "GQuestionTableViewController.h"
 #import "TabEditCategory.h"
+#import "Values.h"
 
 @interface GAddQuestionViewController ()
 @property(assign, nonatomic) NSInteger *categor;
@@ -18,6 +18,7 @@
 @end
 
 @implementation GAddQuestionViewController
+
 
 NSInteger *categor;
 
@@ -33,11 +34,8 @@ NSInteger *categor;
 }
 
 - (IBAction)saveQuestionButton:(id)sender {
-    Values *value = [Values new];
-    categor = [value returnCategoryName];
-    NSString *textInputQuestion = self.textQuestion.text;
-    NSLog(@"Категория %ld Вопрос %@", (long)categor, textInputQuestion);
-    [value addItmeInArrayQuestion:categor question:self.textQuestion.text];
+     NSString* idCat = [[Values sharedValues]category];
+    [[Values sharedValues]addItmeInArrayQuestion:idCat];
 }
 
 

@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface GQuestionTableViewController : UITableViewController
-
--(NSString*) returnCategory;
+@property (assign, nonatomic) NSInteger *choiseQuestion, *category;
+@property (strong, nonatomic) NSString *idCategoryInTab, *idQuestion;
+@property (strong, nonatomic) NSMutableArray *arrayQuestions;
 
 @end

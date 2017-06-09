@@ -11,15 +11,9 @@
 
 @interface QuestionsTabThree ()
 
-@property (strong, nonatomic) NSArray *arrayAnswerOne,*arrayAnswerTwo,*arrayAnswerThree,*arrayAnswerFour,*arrayAnswerFive;
-@property (assign, nonatomic) NSInteger *userChoiseAnswer, *userChoiseQuestion;
-@property (strong, nonatomic) NSString *stringAnswerView;
-
 @end
 
 @implementation QuestionsTabThree
-
-NSInteger *userChoiseAnswer;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,15 +27,6 @@ NSInteger *userChoiseAnswer;
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    self.arrayAnswerOne = @[@"1answer_1", @"answer_2", @"answer_3",@"answer_4",@"answer_5"];
-    self.arrayAnswerTwo = @[@"2answer_1", @"answer_2", @"answer_3",@"answer_4",@"answer_5"];
-    self.arrayAnswerThree = @[@"3answer_1", @"answer_2", @"answer_3",@"answer_4",@"answer_5"];
-    self.arrayAnswerFour = @[@"4answer_1", @"answer_2", @"answer_3",@"answer_4",@"answer_5"];
-    self.arrayAnswerFive = @[@"5answer_1", @"answer_2", @"answer_3",@"answer_4",@"answer_5"];
-    
-    QuestionsTabTwo *questionTabTwo = [QuestionsTabTwo new];
-    _userChoiseQuestion = (NSInteger *)[questionTabTwo returnChoiseQuestion];
-    
 }
 
 

@@ -10,10 +10,12 @@
 #import "Values.h"
 
 @interface GAddCategoryViewController ()
+- (IBAction)saveCategoryButton:(UIButton *)sender;
 
 @end
 
 @implementation GAddCategoryViewController
+
 
 NSString* str;
 
@@ -25,14 +27,8 @@ NSString* str;
     [super didReceiveMemoryWarning];
 }
 
-
-
-- (IBAction)saveNewCategory:(id)sender {
-    Values *value = [Values new];
-    [value addItemInArrayCategory:self.textCategorName.text];
-}
-
-- (IBAction)alertViewButton:(id)sender {
-   
+- (IBAction)saveCategoryButton:(UIButton *)sender {
+    [[Values sharedValues]addItemInArrayCategory:self.textCategorName.text];
+    NSLog(@"%@", [[Values sharedValues]arrayTableCategoryV]);
 }
 @end

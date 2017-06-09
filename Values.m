@@ -12,79 +12,97 @@
 
 @interface Values ()
 
-@property (strong, nonatomic) NSMutableArray *rrayTableCategory, *arrayCategorys, *tempArray;
-@property (strong, nonatomic) NSMutableDictionary *dictQuestions;
 
 @end
 
 @implementation Values
 
-NSMutableArray *arrayTableCategory1, *tempArray, *arrayTableQuestions;
-NSInteger *idCategory;
-NSMutableArray *temp;
+static Values *sharedVal = nil;
+
++(Values*) sharedValues {
+    if (sharedVal == nil)
+    {
+        sharedVal = [[Values alloc] init];
+    }
+    return sharedVal;
+}
+
+-(void) initArrays{
+    if (!_arrayCategorys) {
+        _arrayCategorys = [NSMutableArray arrayWithArray:_arrayTableCategory1];
+        NSLog(@"INIT");
+    }
+}
+
 
 // категории
 - (NSMutableArray *)arrayTableCategoryV {
-    if (!arrayTableCategory1){
-        arrayTableCategory1 = [NSMutableArray arrayWithArray:@[@"One", @"Two", @"Three", @"Four", @"Five"]];
+    if (!_arrayTableCategory1){
+        _arrayTableCategory1 = [NSMutableArray arrayWithArray:@[@"One", @"Two", @"Three", @"Four", @"Five"]];
     }
-    return arrayTableCategory1;
-}
-
--(NSMutableArray*) returnCategoryArray{
-    return arrayTableCategory1;
-}
-
--(NSInteger*) returnItemCategory:(NSInteger*)itemNum{
-    return idCategory;
+    return _arrayTableCategory1;
 }
 
 -(void) addItemInArrayCategory:(NSString*)insertValue{
-    [arrayTableCategory1 addObject:insertValue];
-}
-
--(void) changeItemCategory:(NSInteger*)item{
-    
+    [_arrayTableCategory1 addObject:insertValue];
 }
 
 -(void)deleteItemInArrayCategory:(NSUInteger *)numberItem{
-    [arrayTableCategory1 removeObjectAtIndex:(long)numberItem];
+    [_arrayTableCategory1 removeObjectAtIndex:(long)numberItem];
 }
 
 -(void) setIdCategory:(NSInteger*)categoryName{
-    idCategory = categoryName;
+    _idCategory = categoryName;
 }
 -(NSInteger*) returnCategoryName{
-    return idCategory;
+    return _idCategory;
 }
 
 
 //вопросы
 
--(void) addItemTableQuestionsV:(NSInteger*)categoryQuestionKey itemId:(NSString*)questionValue {
-    
-}
-
 -(void) deleteItemTableQuestionsV:(NSInteger*)categoryQuestionKey itemId:(NSInteger*)questionValue {
-    [arrayTableQuestions removeObjectAtIndex:(long)questionValue];
+    [_arrayQuestions removeObjectAtIndex:(long)questionValue];
 }
 
--(NSArray*) arrayTableQuestionsV:(NSInteger*)keyQuestion{
-    return arrayTableQuestions[(long)keyQuestion];
-}
-
--(void) addItmeInArrayQuestion:(NSInteger*)keyCategory question:(NSString*)stringQuestion {
-    if ((long)keyCategory >= arrayTableQuestions.count | (long)keyCategory == 0) {
+-(void) addItmeInArrayQuestion:(NSString*)stringQuestion {
+    if (!_arrayQuestions) {
+        _arrayQuestions = [NSMutableArray arrayWithObject:stringQuestion];
+        NSLog(@"Выход из добавления %@", _arrayQuestions);
     }
-    NSArray *arrayForTest = @[@"test"];
-    temp = arrayTableQuestions[(long)keyCategory];
-    [arrayTableQuestions setObject:temp atIndexedSubscript:(long)keyCategory];
-    NSLog(@"addddddddd %@", arrayTableQuestions);
-    NSLog(@"addddddddd %@", arrayForTest);
+    if (_arrayQuestions) {
+        [_arrayQuestions addObject:stringQuestion];
+    }
 }
 
--(NSMutableArray*) returnQuestionForCategory:(NSInteger*)category{
-    return  temp;
+-(NSMutableArray*) returnQuestionFromCategory:(NSString*)categoryQuestion{
+    _questionFromCategory = [_dictQuestions valueForKey:_category];
+    NSLog(@"returnQuestionFromCategory  %@", _questionFromCategory);
+    return _questionFromCategory;
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
