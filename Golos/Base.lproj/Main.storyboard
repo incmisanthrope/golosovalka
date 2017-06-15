@@ -349,8 +349,9 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="bri-jY-JRP" id="ZOE-7b-QbZ"/>
+                            <outlet property="dataSource" destination="bri-jY-JRP" id="M35-si-vWU"/>
                             <outlet property="delegate" destination="bri-jY-JRP" id="NPN-nz-QTl"/>
+                            <outlet property="prefetchDataSource" destination="bri-jY-JRP" id="YIp-OB-BZ1"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Category" id="9WJ-75-bHX">

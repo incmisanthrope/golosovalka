@@ -20,6 +20,7 @@
 		F7716D8E1ECC7B30009DB974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7716D8C1ECC7B30009DB974 /* LaunchScreen.storyboard */; };
 		F7716D971ECC7BFC009DB974 /* QuestionsTabOne.m in Sources */ = {isa = PBXBuildFile; fileRef = F7716D961ECC7BFC009DB974 /* QuestionsTabOne.m */; };
 		F7C79ABE1ECDB97800F628B6 /* QuestionsTabTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C79ABD1ECDB97800F628B6 /* QuestionsTabTwo.m */; };
+		F7DDAE061EF277B2000913D8 /* CoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DDAE051EF277B2000913D8 /* CoreDataController.m */; };
 		F7F77F1F1EE06BD300AB3976 /* GQuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F77F1E1EE06BD300AB3976 /* GQuestionTableViewController.m */; };
 		F7F77F221EE0706C00AB3976 /* GAddCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F77F211EE0706C00AB3976 /* GAddCategoryViewController.m */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,20 @@
 		F7716D961ECC7BFC009DB974 /* QuestionsTabOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsTabOne.m; sourceTree = "<group>"; };
 		F7C79ABC1ECDB97800F628B6 /* QuestionsTabTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsTabTwo.h; sourceTree = "<group>"; };
 		F7C79ABD1ECDB97800F628B6 /* QuestionsTabTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsTabTwo.m; sourceTree = "<group>"; };
+		F7DDADCA1EF00446000913D8 /* Questions+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Questions+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F7DDADCB1EF00446000913D8 /* Questions+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Questions+CoreDataClass.h"; sourceTree = "<group>"; };
+		F7DDADCC1EF00446000913D8 /* Questions+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Questions+CoreDataClass.m"; sourceTree = "<group>"; };
+		F7DDADCD1EF00446000913D8 /* Questions+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Questions+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F7DDADCE1EF00446000913D8 /* AnswersForQuestion+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnswersForQuestion+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F7DDADCF1EF00446000913D8 /* AnswersForQuestion+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnswersForQuestion+CoreDataClass.h"; sourceTree = "<group>"; };
+		F7DDADD01EF00446000913D8 /* AnswersForQuestion+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AnswersForQuestion+CoreDataClass.m"; sourceTree = "<group>"; };
+		F7DDADD11EF00446000913D8 /* AnswersForQuestion+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AnswersForQuestion+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F7DDADD21EF00446000913D8 /* Category+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Category+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F7DDADD31EF00446000913D8 /* Category+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Category+CoreDataClass.h"; sourceTree = "<group>"; };
+		F7DDADD41EF00446000913D8 /* Category+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Category+CoreDataClass.m"; sourceTree = "<group>"; };
+		F7DDADD51EF00446000913D8 /* Category+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Category+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F7DDAE041EF277B2000913D8 /* CoreDataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataController.h; sourceTree = "<group>"; };
+		F7DDAE051EF277B2000913D8 /* CoreDataController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataController.m; sourceTree = "<group>"; };
 		F7F77F1D1EE06BD300AB3976 /* GQuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQuestionTableViewController.h; sourceTree = "<group>"; };
 		F7F77F1E1EE06BD300AB3976 /* GQuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQuestionTableViewController.m; sourceTree = "<group>"; };
 		F7F77F201EE0706C00AB3976 /* GAddCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAddCategoryViewController.h; sourceTree = "<group>"; };
@@ -68,6 +83,7 @@
 		F7716D721ECC7B2F009DB974 = {
 			isa = PBXGroup;
 			children = (
+				F7DDADC91EEFD032000913D8 /* Models */,
 				F7716D7D1ECC7B2F009DB974 /* Golos */,
 				F7716D7C1ECC7B2F009DB974 /* Products */,
 				F739D8D51ED4694400C2BB10 /* Cor.xcdatamodeld */,
@@ -95,6 +111,8 @@
 				F7716D8C1ECC7B30009DB974 /* LaunchScreen.storyboard */,
 				F7716D8F1ECC7B30009DB974 /* Info.plist */,
 				F7716D7E1ECC7B2F009DB974 /* Supporting Files */,
+				F7DDAE041EF277B2000913D8 /* CoreDataController.h */,
+				F7DDAE051EF277B2000913D8 /* CoreDataController.m */,
 			);
 			path = Golos;
 			sourceTree = "<group>";
@@ -147,6 +165,25 @@
 			);
 			name = TabTwo;
 			path = Golos;
+			sourceTree = "<group>";
+		};
+		F7DDADC91EEFD032000913D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F7DDADCA1EF00446000913D8 /* Questions+CoreDataProperties.h */,
+				F7DDADCB1EF00446000913D8 /* Questions+CoreDataClass.h */,
+				F7DDADCC1EF00446000913D8 /* Questions+CoreDataClass.m */,
+				F7DDADCD1EF00446000913D8 /* Questions+CoreDataProperties.m */,
+				F7DDADCE1EF00446000913D8 /* AnswersForQuestion+CoreDataProperties.h */,
+				F7DDADCF1EF00446000913D8 /* AnswersForQuestion+CoreDataClass.h */,
+				F7DDADD01EF00446000913D8 /* AnswersForQuestion+CoreDataClass.m */,
+				F7DDADD11EF00446000913D8 /* AnswersForQuestion+CoreDataProperties.m */,
+				F7DDADD21EF00446000913D8 /* Category+CoreDataProperties.h */,
+				F7DDADD31EF00446000913D8 /* Category+CoreDataClass.h */,
+				F7DDADD41EF00446000913D8 /* Category+CoreDataClass.m */,
+				F7DDADD51EF00446000913D8 /* Category+CoreDataProperties.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +270,7 @@
 				F717A5151ED84F4800ED3BE6 /* TabEditCategory.m in Sources */,
 				F7F77F221EE0706C00AB3976 /* GAddCategoryViewController.m in Sources */,
 				F7716D971ECC7BFC009DB974 /* QuestionsTabOne.m in Sources */,
+				F7DDAE061EF277B2000913D8 /* CoreDataController.m in Sources */,
 				F70943661EE14688007FF1B3 /* GEditCAtegoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +395,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Release;
 		};

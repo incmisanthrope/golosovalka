@@ -7,16 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
 @interface Values : NSObject
 
 +(Values*) sharedValues;
 
+@property (readonly, strong) NSPersistentContainer *persistentContainer;
+
 @property (strong, nonatomic) NSString *question, *category;
 @property (strong, nonatomic) NSMutableArray *arrayCatQustion, *arrayCategorys, *arrayQuestions, *questionFromCategory, *tempArray, *arrayTableCategory1, *temp;
 @property (strong, nonatomic) NSMutableDictionary *dictQuestions;
 @property (assign, nonatomic) NSInteger *idCategory, *categoryCount;
+@property (strong, nonatomic) NSArray *arrayAllbject, *allObj;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
+- (NSFetchedResultsController *)fetchedResultsController;
 -(NSMutableArray *)arrayTableCategoryV;
 
 -(void) deleteItemInArrayCategory:(NSUInteger*)numberItem;
@@ -33,6 +39,13 @@
 -(void) initArrays;
 
 -(NSMutableArray*) returnQuestionFromCategory:(NSString*)categoryQuestion;
+
+
+-(void) addObject:(NSString*)objAdd;
+-(NSArray*) allCategory;
+
+
+
 
 
 @end

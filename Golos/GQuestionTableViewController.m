@@ -9,6 +9,7 @@
 #import "GQuestionTableViewController.h"
 #import "TabEditCategory.h"
 #import "Values.h"
+#import "Category+CoreDataProperties.h"
 
 @interface GQuestionTableViewController ()
 
@@ -24,6 +25,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
+    Category *categoryObject;
     _arrayQuestions = [[Values sharedValues]arrayQuestions];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     NSLog(@"ViewWillAppear %@", _arrayQuestions);

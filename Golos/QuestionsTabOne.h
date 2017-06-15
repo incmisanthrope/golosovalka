@@ -10,6 +10,9 @@
 
 @interface QuestionsTabOne : UITableViewController
 
+@property(assign, nonatomic) NSInteger *userChoiseCategory;
+@property(strong, nonatomic) NSMutableArray *arrayTableCategory;
+
 -(NSUInteger) returnChoiseCategory;
 
 -(NSMutableArray*) returnCategoryArray;

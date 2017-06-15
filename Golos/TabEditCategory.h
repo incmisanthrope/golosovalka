@@ -11,8 +11,9 @@
 @interface TabEditCategory : UITableViewController
 
 - (IBAction)longPressEditCategory:(id)sender;
-@property(strong, nonatomic) NSString *questionTAbName;
+@property (strong, nonatomic) NSString *questionTAbName;
 @property (strong, nonatomic) NSMutableArray *arrayCategory;
-@property (assign,nonatomic) NSInteger *idCategoryInEdit;
+@property (assign, nonatomic) NSInteger *idCategoryInEdit;
+@property (strong, nonatomic) NSArray *arrayCore;
 
 @end

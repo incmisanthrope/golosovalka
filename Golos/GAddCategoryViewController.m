@@ -28,7 +28,8 @@ NSString* str;
 }
 
 - (IBAction)saveCategoryButton:(UIButton *)sender {
-    [[Values sharedValues]addItemInArrayCategory:self.textCategorName.text];
-    NSLog(@"%@", [[Values sharedValues]arrayTableCategoryV]);
+//    [[Values sharedValues]addItemInArrayCategory:self.textCategorName.text];
+//    NSLog(@"%@", [[Values sharedValues]arrayTableCategoryV]);
+    [[Values sharedValues]addObject:self.textCategorName.text];
 }
 @end

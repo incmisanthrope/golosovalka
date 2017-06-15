@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "Entity+CoreDataProperties.h"
 #import "QuestionsTabOne.h"
+#import "Values.h"
 
 @interface AppDelegate ()
 
@@ -16,9 +16,9 @@
 
 @implementation AppDelegate
 
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
     
     return YES;
 }
@@ -89,6 +89,7 @@
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    [[Values sharedValues].persistentContainer.viewContext save:nil];
 }
 
 

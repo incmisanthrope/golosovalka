@@ -10,6 +10,7 @@
 #import "Values.h"
 #import "GQuestionTableViewController.h"
 #import "GAddCategoryViewController.h"
+#import "Category+CoreDataProperties.h"
 
 @interface TabEditCategory ()
 
@@ -40,38 +41,42 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    Values *value = [Values new];
-    [value initArrays];
-    _arrayCategory = [NSMutableArray arrayWithArray:[[Values sharedValues]arrayTableCategoryV]];
+    _arrayCategory = [NSMutableArray arrayWithArray:[[Values sharedValues]allCategory]];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
-    NSLog(@"Обновка вьюшки  %@", [[Values sharedValues]arrayTableCategoryV]);
 }
+
 
 #pragma mark - Table view data source
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    [[Values sharedValues]setCategoryCount:(long)_arrayCategory.count];
+    [[Values sharedValues]setCategoryCount:(NSInteger*)_arrayCategory.count];
     return _arrayCategory.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellEditCategory" forIndexPath:indexPath];
-    NSString *stringForCell = [_arrayCategory objectAtIndex:indexPath.row];
+    Category *category =  [_arrayCategory objectAtIndex:indexPath.row];
+    NSString *stringForCell = [NSString stringWithFormat:@"%@", category.category];
     cell.textLabel.text = stringForCell;
-    
-    
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSFetchedResultsController *resultController = [[Values sharedValues]fetchedResultsController];
+    Category *categoryObject = [resultController objectAtIndexPath:indexPath];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     [[Values sharedValues]setIdCategory:(NSInteger*)indexPath.row];
     [[Values sharedValues]setCategory:[_arrayCategory objectAtIndex:indexPath.row]];
     NSLog(@"ID CATEGORY IN EDIT %ld", (long)[[Values sharedValues]idCategory]);
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressEditCategory:)];
     [self.tableView addGestureRecognizer:longPress];
+}
+
+- (void)showRecipe:(Category *)categoryObj animated:(BOOL)animated {
+    GQuestionTableViewController *questionViewController = [[GQuestionTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    questionViewController.category = (long)categoryObj;
+    
+    [self.navigationController pushViewController:questionViewController animated:animated];
 }
 
 
