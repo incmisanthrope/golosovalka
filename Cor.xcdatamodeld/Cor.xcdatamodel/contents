@@ -6,16 +6,16 @@
     </entity>
     <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Questions" inverseName="fromCategory" inverseEntity="Questions" syncable="YES"/>
+        <relationship name="catQuestions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Questions" inverseName="fromCategory" inverseEntity="Questions" syncable="YES"/>
     </entity>
     <entity name="Questions" representedClassName="Questions" syncable="YES" codeGenerationType="class">
         <attribute name="questions" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="answer" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AnswersForQuestion" inverseName="relationship" inverseEntity="AnswersForQuestion" syncable="YES"/>
-        <relationship name="fromCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="questions" inverseEntity="Category" syncable="YES"/>
+        <relationship name="fromCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="catQuestions" inverseEntity="Category" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Category" positionX="-747" positionY="251" width="128" height="73"/>
-        <element name="Questions" positionX="-549" positionY="240" width="128" height="88"/>
         <element name="AnswersForQuestion" positionX="-371" positionY="249" width="128" height="73"/>
+        <element name="Category" positionX="-747" positionY="251" width="128" height="75"/>
+        <element name="Questions" positionX="-549" positionY="240" width="128" height="88"/>
     </elements>
 </model>

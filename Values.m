@@ -37,49 +37,49 @@ static Values *sharedVal = nil;
 
 
 // категории
-- (NSMutableArray *)arrayTableCategoryV {
-    if (!_arrayTableCategory1){
-        _arrayTableCategory1 = [NSMutableArray arrayWithArray:@[@"One", @"Two", @"Three", @"Four", @"Five"]];
-    }
-    return _arrayTableCategory1;
-}
+//- (NSMutableArray *)arrayTableCategoryV {
+//    if (!_arrayTableCategory1){
+//        _arrayTableCategory1 = [NSMutableArray arrayWithArray:@[@"One", @"Two", @"Three", @"Four", @"Five"]];
+//    }
+//    return _arrayTableCategory1;
+//}
 
--(void) addItemInArrayCategory:(NSString*)insertValue{
-    [_arrayTableCategory1 addObject:insertValue];
-}
-
--(void)deleteItemInArrayCategory:(NSUInteger *)numberItem{
-    [_arrayTableCategory1 removeObjectAtIndex:(long)numberItem];
-}
-
--(void) setIdCategory:(NSInteger*)categoryName{
-    _idCategory = categoryName;
-}
--(NSInteger*) returnCategoryName{
-    return _idCategory;
-}
+//-(void) addItemInArrayCategory:(NSString*)insertValue{
+//    [_arrayTableCategory1 addObject:insertValue];
+//}
+//
+//-(void)deleteItemInArrayCategory:(NSUInteger *)numberItem{
+//    [_arrayTableCategory1 removeObjectAtIndex:(long)numberItem];
+//}
+//
+//-(void) setIdCategory:(NSInteger*)categoryName{
+//    _idCategory = categoryName;
+//}
+//-(NSInteger*) returnCategoryName{
+//    return _idCategory;
+//}
 
 //вопросы
 
--(void) deleteItemTableQuestionsV:(NSInteger*)categoryQuestionKey itemId:(NSInteger*)questionValue {
-    [_arrayQuestions removeObjectAtIndex:(long)questionValue];
-}
-
--(void) addItmeInArrayQuestion:(NSString*)stringQuestion {
-    if (!_arrayQuestions) {
-        _arrayQuestions = [NSMutableArray arrayWithObject:stringQuestion];
-        NSLog(@"Выход из добавления %@", _arrayQuestions);
-    }
-    if (_arrayQuestions) {
-        [_arrayQuestions addObject:stringQuestion];
-    }
-}
-
--(NSMutableArray*) returnQuestionFromCategory:(NSString*)categoryQuestion{
-    _questionFromCategory = [_dictQuestions valueForKey:_category];
-    NSLog(@"returnQuestionFromCategory  %@", _questionFromCategory);
-    return _questionFromCategory;
-}
+//-(void) deleteItemTableQuestionsV:(NSInteger*)categoryQuestionKey itemId:(NSInteger*)questionValue {
+//    [_arrayQuestions removeObjectAtIndex:(long)questionValue];
+//}
+//
+//-(void) addItmeInArrayQuestion:(NSString*)stringQuestion {
+//    if (!_arrayQuestions) {
+//        _arrayQuestions = [NSMutableArray arrayWithObject:stringQuestion];
+//        NSLog(@"Выход из добавления %@", _arrayQuestions);
+//    }
+//    if (_arrayQuestions) {
+//        [_arrayQuestions addObject:stringQuestion];
+//    }
+//}
+//
+//-(NSMutableArray*) returnQuestionFromCategory:(NSString*)categoryQuestion{
+//    _questionFromCategory = [_dictQuestions valueForKey:_category];
+//    NSLog(@"returnQuestionFromCategory  %@", _questionFromCategory);
+//    return _questionFromCategory;
+//}
 
 #pragma mark - Core Data stack
 
@@ -88,7 +88,7 @@ static Values *sharedVal = nil;
     Category *object = [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:self.persistentContainer.viewContext];
     object.category = objAdd;
     [self.persistentContainer.viewContext save:nil];
-    [self print];
+//    [self print];
 }
 
 -(void) print {
@@ -97,18 +97,18 @@ static Values *sharedVal = nil;
         NSLog(@"%@", category.category);
     }
 }
-
--(NSArray*) allCategory {
-    NSEntityDescription *description = [NSEntityDescription entityForName:@"Category" inManagedObjectContext:self.persistentContainer.viewContext];
-    NSError *error = nil;
-    NSFetchRequest *request = [NSFetchRequest new];
-    [request setEntity:description];
-      _arrayAllbject = [self.persistentContainer.viewContext executeFetchRequest:request error:&error];
-    if (error) {
-        NSLog(@"%@", [error localizedDescription]);
-    }
-    return _arrayAllbject;
-}
+//
+//-(NSArray*) allCategory {
+//    NSEntityDescription *description = [NSEntityDescription entityForName:@"Category" inManagedObjectContext:self.persistentContainer.viewContext];
+//    NSError *error = nil;
+//    NSFetchRequest *request = [NSFetchRequest new];
+//    [request setEntity:description];
+//      _arrayAllbject = [self.persistentContainer.viewContext executeFetchRequest:request error:&error];
+//    if (error) {
+//        NSLog(@"%@", [error localizedDescription]);
+//    }
+//    return _arrayAllbject;
+//}
 
 - (NSFetchedResultsController *)fetchedResultsCategory {
     if (_fetchedResultsController == nil) {

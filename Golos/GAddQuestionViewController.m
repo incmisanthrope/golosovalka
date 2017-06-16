@@ -11,6 +11,7 @@
 #import "TabEditCategory.h"
 #import "Values.h"
 
+
 @interface GAddQuestionViewController ()
 @property(assign, nonatomic) NSInteger *categor;
 
@@ -33,10 +34,7 @@ NSInteger *categor;
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)saveQuestionButton:(id)sender {
-     NSString* idCat = [[Values sharedValues]category];
-    [[Values sharedValues]addItmeInArrayQuestion:idCat];
-}
+
 
 
 @end

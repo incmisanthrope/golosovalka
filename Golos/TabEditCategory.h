@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoreDataController.h"
 
-@interface TabEditCategory : UITableViewController
+@interface TabEditCategory: UITableViewController
 
 - (IBAction)longPressEditCategory:(id)sender;
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSString *questionTAbName;
 @property (strong, nonatomic) NSMutableArray *arrayCategory;
 @property (assign, nonatomic) NSInteger *idCategoryInEdit;

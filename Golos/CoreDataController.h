@@ -14,7 +14,5 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext; 
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)path;
--(NSFetchedResultsController*) fetchedResultsController;
 
 @end

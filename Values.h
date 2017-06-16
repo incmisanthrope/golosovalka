@@ -14,6 +14,7 @@
 +(Values*) sharedValues;
 
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
+@property(nonatomic, assign) id<NSFetchRequestResult> delegate;
 
 @property (strong, nonatomic) NSString *question, *category;
 @property (strong, nonatomic) NSMutableArray *arrayCatQustion, *arrayCategorys, *arrayQuestions, *questionFromCategory, *tempArray, *arrayTableCategory1, *temp;

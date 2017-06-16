@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Questions+CoreDataProperties.h"
 
 @interface GQuestionTableViewController : UITableViewController
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (assign, nonatomic) NSInteger *choiseQuestion, *category;
 @property (strong, nonatomic) NSString *idCategoryInTab, *idQuestion;
 @property (strong, nonatomic) NSMutableArray *arrayQuestions;
+
+@property (weak, nonatomic) Questions *questionItem;
 
 @end
