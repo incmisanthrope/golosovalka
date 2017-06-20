@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "CoreDataController.h"
+#import "Category+CoreDataProperties.h"
+
 
 @interface TabEditCategory: UITableViewController
 

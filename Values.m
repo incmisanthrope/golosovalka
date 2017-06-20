@@ -9,7 +9,6 @@
 #import "Values.h"
 #import "TabEditCategory.h"
 #import "GQuestionTableViewController.h"
-#import "Category+CoreDataProperties.h"
 
 @interface Values ()
 
@@ -35,52 +34,6 @@ static Values *sharedVal = nil;
     }
 }
 
-
-// категории
-//- (NSMutableArray *)arrayTableCategoryV {
-//    if (!_arrayTableCategory1){
-//        _arrayTableCategory1 = [NSMutableArray arrayWithArray:@[@"One", @"Two", @"Three", @"Four", @"Five"]];
-//    }
-//    return _arrayTableCategory1;
-//}
-
-//-(void) addItemInArrayCategory:(NSString*)insertValue{
-//    [_arrayTableCategory1 addObject:insertValue];
-//}
-//
-//-(void)deleteItemInArrayCategory:(NSUInteger *)numberItem{
-//    [_arrayTableCategory1 removeObjectAtIndex:(long)numberItem];
-//}
-//
-//-(void) setIdCategory:(NSInteger*)categoryName{
-//    _idCategory = categoryName;
-//}
-//-(NSInteger*) returnCategoryName{
-//    return _idCategory;
-//}
-
-//вопросы
-
-//-(void) deleteItemTableQuestionsV:(NSInteger*)categoryQuestionKey itemId:(NSInteger*)questionValue {
-//    [_arrayQuestions removeObjectAtIndex:(long)questionValue];
-//}
-//
-//-(void) addItmeInArrayQuestion:(NSString*)stringQuestion {
-//    if (!_arrayQuestions) {
-//        _arrayQuestions = [NSMutableArray arrayWithObject:stringQuestion];
-//        NSLog(@"Выход из добавления %@", _arrayQuestions);
-//    }
-//    if (_arrayQuestions) {
-//        [_arrayQuestions addObject:stringQuestion];
-//    }
-//}
-//
-//-(NSMutableArray*) returnQuestionFromCategory:(NSString*)categoryQuestion{
-//    _questionFromCategory = [_dictQuestions valueForKey:_category];
-//    NSLog(@"returnQuestionFromCategory  %@", _questionFromCategory);
-//    return _questionFromCategory;
-//}
-
 #pragma mark - Core Data stack
 
 
@@ -88,27 +41,25 @@ static Values *sharedVal = nil;
     Category *object = [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:self.persistentContainer.viewContext];
     object.category = objAdd;
     [self.persistentContainer.viewContext save:nil];
-//    [self print];
 }
 
--(void) print {
-    NSArray *allObj = [self allCategory];
-    for (Category *category in allObj) {
-        NSLog(@"%@", category.category);
-    }
+-(void) addQuestionObject:(Questions *)object{
+    NSLog(@"VOT ONO");
+    object.questions = @"Vopros";
+    [self.persistentContainer.viewContext save:nil];
 }
-//
-//-(NSArray*) allCategory {
-//    NSEntityDescription *description = [NSEntityDescription entityForName:@"Category" inManagedObjectContext:self.persistentContainer.viewContext];
-//    NSError *error = nil;
-//    NSFetchRequest *request = [NSFetchRequest new];
-//    [request setEntity:description];
-//      _arrayAllbject = [self.persistentContainer.viewContext executeFetchRequest:request error:&error];
-//    if (error) {
-//        NSLog(@"%@", [error localizedDescription]);
-//    }
-//    return _arrayAllbject;
-//}
+
+-(NSArray*) allCategory {
+    NSEntityDescription *description = [NSEntityDescription entityForName:@"Category" inManagedObjectContext:self.persistentContainer.viewContext];
+    NSError *error = nil;
+    NSFetchRequest *request = [NSFetchRequest new];
+    [request setEntity:description];
+      _arrayAllbject = [self.persistentContainer.viewContext executeFetchRequest:request error:&error];
+    if (error) {
+        NSLog(@"%@", [error localizedDescription]);
+    }
+    return _arrayAllbject;
+}
 
 - (NSFetchedResultsController *)fetchedResultsCategory {
     if (_fetchedResultsController == nil) {
@@ -122,7 +73,6 @@ static Values *sharedVal = nil;
         [fetchRequest setSortDescriptors:sortDescriptors];
         
         NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.persistentContainer.viewContext sectionNameKeyPath:nil cacheName:@"Root"];
-        aFetchedResultsController.delegate = self;
         self.fetchedResultsController = aFetchedResultsController;
     }
     

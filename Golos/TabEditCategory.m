@@ -10,7 +10,7 @@
 #import "Values.h"
 #import "GQuestionTableViewController.h"
 #import "GAddCategoryViewController.h"
-#import "Category+CoreDataProperties.h"
+
 
 @interface TabEditCategory ()
 
@@ -23,11 +23,11 @@
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"Question"]) {
+    if ([[segue identifier] isEqualToString:@"Questions"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Category *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        GQuestionTableViewController *questionController = (GQuestionTableViewController*)[segue destinationViewController];
-        [questionController setQuestionItem:object];
+        GQuestionTableViewController *controller = (GQuestionTableViewController *)[[segue destinationViewController] topViewController];
+        [controller setQuestionItem:object];
     }
 }
 
@@ -45,17 +45,13 @@
 -(void)viewWillAppear:(BOOL)animated{
     self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
     [super viewWillAppear:YES];
-    UITableView *viewcontroller = self.tableView;
+    
 }
 
 - (void)initializeFetchedResultsController
 {
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Category"];
-    NSManagedObjectContext *moc = [Values sharedValues].persistentContainer.viewContext;
-    [self setFetchedResultsController:[[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:moc sectionNameKeyPath:@"category" cacheName:@"Cache"]];
-    [[self fetchedResultsController] setDelegate:self];
+    [self setFetchedResultsController:[[NSFetchedResultsController alloc] initWithFetchRequest:[Category fetchRequest] managedObjectContext:[Values sharedValues].persistentContainer.viewContext sectionNameKeyPath:@"category" cacheName:@"Cache"]];
 }
-
 
 #pragma mark - Table view data source
 
@@ -66,13 +62,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellEditCategory" forIndexPath:indexPath];
-//    Category *category =  [_arrayCategory objectAtIndex:indexPath.row];
-    
     Category *category = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [self configureCell:cell withEvent:category];
-    
-//    NSString *stringForCell = [NSString stringWithFormat:@"%@", category.category];
-//    cell.textLabel.text = stringForCell;
     return cell;
 }
 
@@ -115,25 +106,18 @@
         return _fetchedResultsController;
     }
     
-    NSFetchRequest *fetchRequest = Category.fetchRequest;
+    NSFetchRequest<Category *> *fetchRequest = Category.fetchRequest;
     
-    // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
-    // Edit the sort key as appropriate.
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"category" ascending:NO];
     
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
     
-    // Edit the section name key path and cache name if appropriate.
-    // nil for section name key path means "no sections".
     NSFetchedResultsController<Category *> *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[Values sharedValues].persistentContainer.viewContext sectionNameKeyPath:nil cacheName:@"Master"];
-    aFetchedResultsController.delegate = self;
     
     NSError *error = nil;
     if (![aFetchedResultsController performFetch:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
         NSLog(@"Unresolved error %@, %@", error, error.userInfo);
         abort();
     }

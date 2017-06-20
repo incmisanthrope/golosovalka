@@ -2,7 +2,7 @@
 //  Category+CoreDataProperties.m
 //  Golos
 //
-//  Created by Gleb R on 13.06.2017.
+//  Created by Gleb R on 20.06.2017.
 //  Copyright © 2017 IncMisanthrope. All rights reserved.
 //
 //
@@ -16,6 +16,6 @@
 }
 
 @dynamic category;
-@dynamic questions;
+@dynamic catQuestions;
 
 @end

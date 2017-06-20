@@ -2,7 +2,7 @@
 //  Questions+CoreDataProperties.h
 //  Golos
 //
-//  Created by Gleb R on 13.06.2017.
+//  Created by Gleb R on 20.06.2017.
 //  Copyright © 2017 IncMisanthrope. All rights reserved.
 //
 //
@@ -17,17 +17,17 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSFetchRequest<Questions *> *)fetchRequest;
 
 @property (nullable, nonatomic, copy) NSString *questions;
+@property (nullable, nonatomic, retain) NSSet<AnswersForQuestion *> *answerToRel;
 @property (nullable, nonatomic, retain) Category *fromCategory;
-@property (nullable, nonatomic, retain) NSSet<AnswersForQuestion *> *answer;
 
 @end
 
 @interface Questions (CoreDataGeneratedAccessors)
 
-- (void)addAnswerObject:(AnswersForQuestion *)value;
-- (void)removeAnswerObject:(AnswersForQuestion *)value;
-- (void)addAnswer:(NSSet<AnswersForQuestion *> *)values;
-- (void)removeAnswer:(NSSet<AnswersForQuestion *> *)values;
+- (void)addAnswerToRelObject:(AnswersForQuestion *)value;
+- (void)removeAnswerToRelObject:(AnswersForQuestion *)value;
+- (void)addAnswerToRel:(NSSet<AnswersForQuestion *> *)values;
+- (void)removeAnswerToRel:(NSSet<AnswersForQuestion *> *)values;
 
 @end
 

@@ -23,30 +23,17 @@
 @property (strong, nonatomic) NSArray *arrayAllbject, *allObj;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
+
 - (NSFetchedResultsController *)fetchedResultsController;
--(NSMutableArray *)arrayTableCategoryV;
-
--(void) deleteItemInArrayCategory:(NSUInteger*)numberItem;
--(void) addItemInArrayCategory:(NSString*)insertValue;
-
--(void) addItmeInArrayQuestion:(NSString*)stringQuestion;
--(void) deleteItemTableQuestionsV:(NSInteger*)categoryQuestionKey itemId:(NSInteger*)questionValue;
 
 
 -(void) setIdCategory:(NSInteger*)categoryName;
--(NSInteger*) returnCategoryName;
-
 
 -(void) initArrays;
 
--(NSMutableArray*) returnQuestionFromCategory:(NSString*)categoryQuestion;
-
-
 -(void) addObject:(NSString*)objAdd;
+
 -(NSArray*) allCategory;
-
-
-
 
 
 @end

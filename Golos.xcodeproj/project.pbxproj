@@ -26,6 +26,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F7078FBA1EF8FE1C00517295 /* Category+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Category+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F7078FBB1EF8FE1C00517295 /* Category+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Category+CoreDataClass.h"; sourceTree = "<group>"; };
+		F7078FBC1EF8FE1C00517295 /* Category+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Category+CoreDataClass.m"; sourceTree = "<group>"; };
+		F7078FBD1EF8FE1C00517295 /* Category+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Category+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F7078FBE1EF8FE1C00517295 /* AnswersForQuestion+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnswersForQuestion+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F7078FBF1EF8FE1C00517295 /* AnswersForQuestion+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnswersForQuestion+CoreDataClass.h"; sourceTree = "<group>"; };
+		F7078FC01EF8FE1C00517295 /* AnswersForQuestion+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AnswersForQuestion+CoreDataClass.m"; sourceTree = "<group>"; };
+		F7078FC11EF8FE1C00517295 /* AnswersForQuestion+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AnswersForQuestion+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F7078FC21EF8FE1C00517295 /* Questions+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Questions+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F7078FC31EF8FE1C00517295 /* Questions+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Questions+CoreDataClass.h"; sourceTree = "<group>"; };
+		F7078FC41EF8FE1C00517295 /* Questions+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Questions+CoreDataClass.m"; sourceTree = "<group>"; };
+		F7078FC51EF8FE1C00517295 /* Questions+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Questions+CoreDataProperties.m"; sourceTree = "<group>"; };
 		F70943641EE14688007FF1B3 /* GEditCAtegoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEditCAtegoryViewController.h; sourceTree = "<group>"; };
 		F70943651EE14688007FF1B3 /* GEditCAtegoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEditCAtegoryViewController.m; sourceTree = "<group>"; };
 		F70943671EE17FA6007FF1B3 /* GAddQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAddQuestionViewController.h; sourceTree = "<group>"; };
@@ -49,18 +61,6 @@
 		F7716D961ECC7BFC009DB974 /* QuestionsTabOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsTabOne.m; sourceTree = "<group>"; };
 		F7C79ABC1ECDB97800F628B6 /* QuestionsTabTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsTabTwo.h; sourceTree = "<group>"; };
 		F7C79ABD1ECDB97800F628B6 /* QuestionsTabTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsTabTwo.m; sourceTree = "<group>"; };
-		F7DDADCA1EF00446000913D8 /* Questions+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Questions+CoreDataProperties.h"; sourceTree = "<group>"; };
-		F7DDADCB1EF00446000913D8 /* Questions+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Questions+CoreDataClass.h"; sourceTree = "<group>"; };
-		F7DDADCC1EF00446000913D8 /* Questions+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Questions+CoreDataClass.m"; sourceTree = "<group>"; };
-		F7DDADCD1EF00446000913D8 /* Questions+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Questions+CoreDataProperties.m"; sourceTree = "<group>"; };
-		F7DDADCE1EF00446000913D8 /* AnswersForQuestion+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnswersForQuestion+CoreDataProperties.h"; sourceTree = "<group>"; };
-		F7DDADCF1EF00446000913D8 /* AnswersForQuestion+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnswersForQuestion+CoreDataClass.h"; sourceTree = "<group>"; };
-		F7DDADD01EF00446000913D8 /* AnswersForQuestion+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AnswersForQuestion+CoreDataClass.m"; sourceTree = "<group>"; };
-		F7DDADD11EF00446000913D8 /* AnswersForQuestion+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AnswersForQuestion+CoreDataProperties.m"; sourceTree = "<group>"; };
-		F7DDADD21EF00446000913D8 /* Category+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Category+CoreDataProperties.h"; sourceTree = "<group>"; };
-		F7DDADD31EF00446000913D8 /* Category+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Category+CoreDataClass.h"; sourceTree = "<group>"; };
-		F7DDADD41EF00446000913D8 /* Category+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Category+CoreDataClass.m"; sourceTree = "<group>"; };
-		F7DDADD51EF00446000913D8 /* Category+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Category+CoreDataProperties.m"; sourceTree = "<group>"; };
 		F7DDAE041EF277B2000913D8 /* CoreDataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataController.h; sourceTree = "<group>"; };
 		F7DDAE051EF277B2000913D8 /* CoreDataController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataController.m; sourceTree = "<group>"; };
 		F7F77F1D1EE06BD300AB3976 /* GQuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQuestionTableViewController.h; sourceTree = "<group>"; };
@@ -170,18 +170,18 @@
 		F7DDADC91EEFD032000913D8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F7DDADCA1EF00446000913D8 /* Questions+CoreDataProperties.h */,
-				F7DDADCB1EF00446000913D8 /* Questions+CoreDataClass.h */,
-				F7DDADCC1EF00446000913D8 /* Questions+CoreDataClass.m */,
-				F7DDADCD1EF00446000913D8 /* Questions+CoreDataProperties.m */,
-				F7DDADCE1EF00446000913D8 /* AnswersForQuestion+CoreDataProperties.h */,
-				F7DDADCF1EF00446000913D8 /* AnswersForQuestion+CoreDataClass.h */,
-				F7DDADD01EF00446000913D8 /* AnswersForQuestion+CoreDataClass.m */,
-				F7DDADD11EF00446000913D8 /* AnswersForQuestion+CoreDataProperties.m */,
-				F7DDADD21EF00446000913D8 /* Category+CoreDataProperties.h */,
-				F7DDADD31EF00446000913D8 /* Category+CoreDataClass.h */,
-				F7DDADD41EF00446000913D8 /* Category+CoreDataClass.m */,
-				F7DDADD51EF00446000913D8 /* Category+CoreDataProperties.m */,
+				F7078FBA1EF8FE1C00517295 /* Category+CoreDataProperties.h */,
+				F7078FBB1EF8FE1C00517295 /* Category+CoreDataClass.h */,
+				F7078FBC1EF8FE1C00517295 /* Category+CoreDataClass.m */,
+				F7078FBD1EF8FE1C00517295 /* Category+CoreDataProperties.m */,
+				F7078FBE1EF8FE1C00517295 /* AnswersForQuestion+CoreDataProperties.h */,
+				F7078FBF1EF8FE1C00517295 /* AnswersForQuestion+CoreDataClass.h */,
+				F7078FC01EF8FE1C00517295 /* AnswersForQuestion+CoreDataClass.m */,
+				F7078FC11EF8FE1C00517295 /* AnswersForQuestion+CoreDataProperties.m */,
+				F7078FC21EF8FE1C00517295 /* Questions+CoreDataProperties.h */,
+				F7078FC31EF8FE1C00517295 /* Questions+CoreDataClass.h */,
+				F7078FC41EF8FE1C00517295 /* Questions+CoreDataClass.m */,
+				F7078FC51EF8FE1C00517295 /* Questions+CoreDataProperties.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";

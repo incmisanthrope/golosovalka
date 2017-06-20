@@ -11,7 +11,6 @@
 #import "TabEditCategory.h"
 #import "Values.h"
 
-
 @interface GAddQuestionViewController ()
 @property(assign, nonatomic) NSInteger *categor;
 
@@ -25,16 +24,22 @@ NSInteger *categor;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)saveQuestionButton:(id)sender {
+    [self addQuestion:self.textQuestion.text];
+}
 
+-(void)addQuestion:(NSString*)txtQuestion {
+    NSEntityDescription *entityQuestions = [NSEntityDescription entityForName:@"Questions" inManagedObjectContext:[Values sharedValues].persistentContainer.viewContext];
+    NSManagedObject *newQuestions = [[NSManagedObject alloc] initWithEntity:entityQuestions insertIntoManagedObjectContext:[Values sharedValues].persistentContainer.viewContext];
+        [newQuestions setValue:txtQuestion forKey:@"questions"];
+    [[Values sharedValues].persistentContainer.viewContext save:nil];
+}
 
 
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Questions+CoreDataProperties.h"
+#import "Category+CoreDataProperties.h"
 
 @interface GQuestionTableViewController : UITableViewController
 
@@ -16,6 +17,6 @@
 @property (strong, nonatomic) NSString *idCategoryInTab, *idQuestion;
 @property (strong, nonatomic) NSMutableArray *arrayQuestions;
 
-@property (weak, nonatomic) Questions *questionItem;
+@property (weak, nonatomic) Category *questionItem;
 
 @end
